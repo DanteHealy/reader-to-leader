@@ -1,4 +1,4 @@
-# Taking cues from the task manager mini project. 
+# Taking cues from the "task manager" mini project. 
 
 import os
 from flask import (
@@ -6,6 +6,7 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
 
@@ -25,6 +26,11 @@ mongo = PyMongo(app)
 def get_books():
     books = mongo.db.books.find()
     return render_template("books.html", books=books) 
+
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    return render_template("register.html")
 
 
 if __name__ == "__main__":
