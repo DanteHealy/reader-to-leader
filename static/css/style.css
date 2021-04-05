@@ -1,4 +1,21 @@
+/*- background and text colour scheme -*/ 
 body {
     background-color: #8c6a58;
     color: white;
 }
+
+/*- apply shading on the elements -*/ 
+.text-shadow {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+/*- make navbar transparent  (not sure if I'll use this on the navbar) -*/ 
+.transparentBG {
+  background-color: rgba(0,0,0,0);
+}
+
+/*- make navbar complementary brown -*/ 
+.brownBG {
+  background-color: #587A8C;
+}
+
