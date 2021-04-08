@@ -1,30 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <div class="container">
+        {% for book in books %}
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="{{ book.image_url }}">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{ book.book_title }} : by {{ book.author }}<i class="fa fa-ellipsis-v right"></i></span>
+                        <p><a href="#">This is a link</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Genre: {{ book.genre_name }}<i class="fa fa-times right"></i></span>
+                        Rating: {{ book.book_rating }} <br>                        
+                        <p>
+                            Review: <br> 
+                            {{ book.book_review }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
     
-    {% for book in books %}
-        {{ book.book_title }}<br>
-        {{ book.author }}<br>
-        {{ book.genre_name }}<br>
-        {{ book.book_review }}<br>
-        {{ book.book_rating }}<br>
-        {{ book.image_url }}<br>
-    {% endfor %}
-
-    <ul class="collapsible contrastBG">
-        <li>
-        <div class="collapsible-header contrastBG"><i class="fas fa-caret-down"></i>First</div>
-        <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-        <div class="collapsible-header contrastBG"><i class="fas fa-caret-down"></i>Second</div>
-        <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-        <div class="collapsible-header contrastBG"><i class="fas fa-caret-down"></i>Third</div>
-        <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-    </ul>
 
 
 {% endblock %}
