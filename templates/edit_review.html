@@ -10,9 +10,13 @@
                 <div class="input-field col s12">
                     <i class="fas fa-filter prefix light-blue-text text-darken-4"></i>
                     <select id="genre_name" name="genre_name" class="vaidate" required>
-                    <option value="" disabled selected>Choose Genre</option>
+                    <option value="" disabled>Choose Genre</option>
                     {% for genre in genres %}
-                        <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+                        {% if genre.genre_name == book.genre_name %}
+                            <option value="{{ genre.genre_name }}" selected>{{ genre.genre_name }}</option>
+                        {% else %}
+                            <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+                        {% endif %}
                     {% endfor %}
                     </select>
                     <label>Book Genre</label>
@@ -23,7 +27,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-book prefix light-blue-text text-darken-4"></i>
                     <input id="book_title" name="book_title" minlength="5" maxlength="100"
-                    type="text" class="validate" required>
+                        value="{{ book.book_title }}" type="text" class="validate" required>
                     <label for="book_title">Book Title</label>
                 </div>
             </div>
@@ -31,7 +35,8 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-user-check prefix light-blue-text text-darken-4"></i>
-                    <input id="author" name="author" type="text" class="validate" required>
+                    <input id="author" name="author" minlength="1" maxlength="100"
+                    value="{{ book.author }}" type="text" class="validate" required>
                     <label for="author">Author</label>
                 </div>
             </div>
@@ -40,7 +45,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-file-alt prefix light-blue-text text-darken-4"></i>                    
                     <textarea id="book_review" name="book_review" minlength="20" 
-                    maxlength="500" class="materialize-textarea validate" required></textarea>
+                    maxlength="500" class="materialize-textarea validate" required>{{- book.book_review -}}</textarea>
                     <label for="book_review">Book Review</label>
                 </div>
             </div>
@@ -48,7 +53,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-star prefix light-blue-text text-darken-4"></i>
-                    <input id="book_rating" name="book_rating" type="number" min="1" max="5" class="validate" required>
+                    <input id="book_rating" name="book_rating" value="{{ book.book_rating }}" type="number" min="1" max="5" class="validate" required>
                     <label for="book_rating">Star Rating (out of five)</label>
                 </div>
             </div>
@@ -56,13 +61,17 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-images prefix light-blue-text text-darken-4"></i>
-                    <input id="image_url" name="image_url" type="text" class="validate" required>
+                    <input id="image_url" name="image_url" value="{{ book.image_url }}" type="text" class="validate" required>
                     <label for="image_url">Image URL</label>
                 </div>
             </div>
             <!-- submit button -->
             <div class="row">
                 <div class="col s12 center-align">
+                    <!-- cencel button -->
+                    <a href="{{ url_for('get_books') }}" class="btn-large red text-shadow">
+                        Cancel <i class="fas fa-times-circle right"></i>
+                    </a>
                     <button type="submit" class="btn-large light-blue darken-1 text-shadow">
                         Edit Review <i class="fas fa-edit right"></i>
                     </button>
