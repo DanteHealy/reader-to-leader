@@ -122,6 +122,14 @@ def add_review():
     return render_template("add_review.html", genres=genres)
 
 
+@app.route("/edit_book/<book_id>", methods=["GET", "POST"])
+def edit_book(book_id):
+    book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
+
+    genres = mongo.db.genres.find().sort("genre_name", 1)
+    return render_template("edit_review.html", book=book, genres=genres)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
