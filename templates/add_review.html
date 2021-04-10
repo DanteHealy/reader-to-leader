@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="light-blue-text text-darken-4 center-align">Add Review</h3>
+    
+    <div class="row">
+        <form class="col s12" method="POST" action="">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-book prefix light-blue-text text-darken-4"></i>
+                    <input id="icon_book" type="text" class="validate">
+                    <label for="icon_book">Book Title</label>
+                </div>
+                <div class="input-field col s12">
+                    <i class="fas fa-user-check prefix light-blue-text text-darken-4"></i>
+                    <input id="icon_user" type="text" class="validate">
+                    <label for="icon_user">Author</label>
+                </div>
+                <div class="input-field col s12">
+                    <i class="fas fa-file-alt prefix light-blue-text text-darken-4"></i>
+                    <input id="icon_review" type="text" class="validate">
+                    <label for="icon_review">Review</label>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
