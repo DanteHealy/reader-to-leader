@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <h3 class="light-blue text-darken-4 center-align">All Book Reviews</h3>
+
     <div class="container">
         {% for book in books %}
         <div class="row">
@@ -10,8 +12,9 @@
                         <img class="activator" src="{{ book.image_url }}">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">{{ book.book_title }} : by {{ book.author }}<i class="fa fa-ellipsis-v right"></i></span>
-                        <p><a href="#">Review(s) link</a></p>
+                        <span class="card-title activator grey-text text-darken-4">{{ book.book_title }} : by {{ book.author }}<i class="fa fa-ellipsis-v right"></i></span>                        
+                        <a href="" class="btn-small green accent-4">Done</a>
+                        <a href="" class="btn-small light-blue accent-4">Edit</a>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">Genre: {{ book.genre_name }}<i class="fa fa-times right"></i></span>

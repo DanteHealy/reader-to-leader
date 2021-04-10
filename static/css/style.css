@@ -31,3 +31,8 @@ body {
 .card {
     height: 700px;
 }
+
+.btn-small {
+    margin: 5px;    
+}
+
