@@ -3,23 +3,43 @@
 
     <h3 class="light-blue-text text-darken-4 center-align">Add Review</h3>
     
-    <div class="row">
+    <div class="row card-panel grey lighten-5">
         <form class="col s12" method="POST" action="">
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-book prefix light-blue-text text-darken-4"></i>
-                    <input id="icon_book" type="text" class="validate">
-                    <label for="icon_book">Book Title</label>
+                    <input id="book_title" minlength="5" maxlength="100"
+                    type="text" class="validate" required>
+                    <label for="book_title">Book Title</label>
                 </div>
+            </div>
+            <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-user-check prefix light-blue-text text-darken-4"></i>
-                    <input id="icon_user" type="text" class="validate">
-                    <label for="icon_user">Author</label>
+                    <input id="author" type="text" class="validate">
+                    <label for="author">Author</label>
                 </div>
+            </div>
+            <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-file-alt prefix light-blue-text text-darken-4"></i>
-                    <input id="icon_review" type="text" class="validate">
-                    <label for="icon_review">Review</label>
+                    <i class="fas fa-file-alt prefix light-blue-text text-darken-4"></i>                    
+                    <textarea id="book_review" name="book_review" minlength="20" 
+                    maxlength="500" class="materialize-textarea validate" required></textarea>
+                    <label for="book_review">Book Review</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-star prefix light-blue-text text-darken-4"></i>
+                    <input id="book_rating" type="number" class="validate">
+                    <label for="book_rating">Star Rating</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-images prefix light-blue-text text-darken-4"></i>
+                    <input id="image_url" type="url" class="validate">
+                    <label for="image_url">Image URL</label>
                 </div>
             </div>
         </form>
