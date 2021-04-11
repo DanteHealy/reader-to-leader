@@ -23,12 +23,12 @@ body {
     line-height: 2;
 }
 
-.card-image {
+.card-image .books {
     height: 500px;
     width: 100%;
 }
 
-.card {
+.card .books {
     height: 700px;
 }
 

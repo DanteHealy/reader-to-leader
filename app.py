@@ -149,6 +149,12 @@ def delete_book(book_id):
     return redirect(url_for("get_books"))
 
 
+@app.route("/get_genres")
+def get_genres():
+    genres = list(mongo.db.genres.find().sort("genre_name", 1))
+    return render_template("genres.html", genres=genres)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
