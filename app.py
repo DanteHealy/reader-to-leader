@@ -142,7 +142,7 @@ def edit_book(book_id):
             "created_by": session["user"]
         }
         mongo.db.books.update({"_id": ObjectId(book_id)}, submit)
-        flash("Review Successfully Updated")        
+        flash("Review Successfully Updated")
 
     book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
     genres = mongo.db.genres.find().sort("genre_name", 1)

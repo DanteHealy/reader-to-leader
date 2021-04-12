@@ -2,6 +2,8 @@
     $(".sidenav").sidenav({edge: "right"});
     $('.collapsible').collapsible();
     $('select').formSelect();
+    /* modal to warn users when deleting reviews or genres */
+    $('.modal').modal();
 
     /* jquery for MaterializeCSS initialization */
     validateMaterializeSelect();
