@@ -1,10 +1,12 @@
   $(document).ready(function(){
     $(".sidenav").sidenav({edge: "right"});
+    /* use for home_page parallax */
+    $('.parallax').parallax();
     $('.collapsible').collapsible();
     $('select').formSelect();
     /* modal to warn users when deleting reviews or genres */
     $('.modal').modal();
-
+    
     /* jquery for MaterializeCSS initialization */
     validateMaterializeSelect();
     function validateMaterializeSelect() {

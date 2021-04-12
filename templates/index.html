@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+  
+    <!-- Taken from Materialize -->
+    <div class="parallax-container">
+      <div class="parallax"><img src="../static/images/bookstore.png" alt=""></div>
+    </div>
+    <div class="section white">
+      <div class="row container center-align">
+        <h2 class="header">Books that Grow Careers</h2>
+        <p class="grey-text text-darken-3 lighten-3">
+            Reader to Leader is a specialist bookreview site curating and reviewing the best books to grow you and your career.            
+        </p>
+        <p class="grey-text text-darken-3 lighten-3">            
+            Our community aims to create value with our members sharing books that have helped them in their careers along with some concise, insightful commentary on why it was helpful.
+        </p>
+        <div class="btn" href="{{ url_for('get_books') }}">Enter</div>
+        </div>
+    </div>
+    <div class="parallax-container">
+      <div class="parallax"><img src="../static/images/bookshelf.png" alt=""></div>
+    </div>
+
+{% endblock %}
