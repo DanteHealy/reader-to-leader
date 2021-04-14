@@ -30,6 +30,11 @@ nav .brand-logo:hover {
     transition: transform .7s; /* Animation */
 }
 
+.warning-image {
+    margin: auto;
+}
+
+
 /*- add styling and animation to the social media icons in the footer -*/ 
 .social-media {
     margin: 10px;
