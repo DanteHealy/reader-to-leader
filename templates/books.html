@@ -22,10 +22,10 @@
     </div>
 
     {% if books|length > 0 %}
-    <div class="container">
-        {% for book in books %}
+    <div class="container wide-container">        
         <div class="row">
-            <div class="col s12 m6 offset-m3">
+        {% for book in books %}
+            <div class="col s12 m6 l4 offset-m1">
                 <div class="card books">
                     <!-- Need to check with tutor support how to fix this -->
                     <div class="card-image books waves-effect waves-block waves-light">
@@ -36,7 +36,7 @@
                         {% endif %}
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">{{ book.book_title }} : by {{ book.author }}<i class="fa fa-ellipsis-v right"></i></span>                        
+                        <span class="card-title activator grey-text text-darken-4"><i class="fa fa-ellipsis-v right"></i></span>                        
                         <!-- Remove and Edit buttons -->
                         {% if session.user|lower == book.created_by|lower %}
                             <a href="#checkmodal" class="btn-small red accent-4 modal-trigger">Delete</a>                            
@@ -55,9 +55,10 @@
                             </div>
                         {% endif %}
                     </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Genre: {{ book.genre_name }}<i class="fa fa-times right"></i></span>
-                        Rating: {{ book.book_rating }} <br>                        
+                    <div class="card-reveal">                        
+                        <span class="card-title grey-text text-darken-4"><h4>{{ book.book_title }}: by {{ book.author }}</h4><i class="fa fa-times right"></i></span>
+                        Genre: {{ book.genre_name }}<br>
+                        Rating: {{ book.book_rating }}<br>
                         <p>
                             Review: <br> 
                             {{ book.book_review }}
@@ -66,8 +67,8 @@
                     </div>
                 </div>
             </div>
-        </div>
         {% endfor %}
+        </div>        
     </div>
     {% else %}    
     <h3 class="red text-darken-4 center-align">No Results Found</h3>

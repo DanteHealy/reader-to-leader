@@ -30,8 +30,14 @@ nav .brand-logo:hover {
     transition: transform .7s; /* Animation */
 }
 
+/* Check if this impacts warning image position or else delete */
 .warning-image {
     margin: auto;
+}
+
+/* apply full width containers */
+.wide-container {
+    width: 100%;
 }
 
 
@@ -51,13 +57,23 @@ nav .brand-logo:hover {
 }
 
 .card-image .books {
-    height: 500px;
+    height: 600px;
     width: 100%;
 }
 
 .card .books {
-    height: 700px;
+    height: 600px;
 }
+
+.card .books:hover {
+    box-shadow: 5px 5px 3px #64ffda;
+}
+
+.card-content {
+    height: 90px;
+}
+
+
 
 .btn-small {
     margin: 5px;    
