@@ -1,6 +1,5 @@
 /*- background and text colour scheme -*/ 
-body {
-    background-color: #8c6a58;
+body {    
     color: black;
 }
 
@@ -19,6 +18,12 @@ body {
   background-color: #587A8C;
 }
 
+/*- extend parallax to full screen width -*/ 
+.container-main {
+    width: 100%;
+    max-width: 100%;
+}
+
 /*- move the brand logo class item to the right by applying padding add hover animation -*/ 
 nav .brand-logo {
     padding-left: 20px;
@@ -26,8 +31,12 @@ nav .brand-logo {
 
 nav .brand-logo:hover {
     color: #64ffda;    
-    transform:scale(1.1);
+    transform:scale(1.05);
     transition: transform .7s; /* Animation */
+}
+
+nav ul a:hover {
+    color: #64ffda;        
 }
 
 /* Check if this impacts warning image position or else delete */
@@ -39,7 +48,6 @@ nav .brand-logo:hover {
 .wide-container {
     width: 100%;
 }
-
 
 /*- add styling and animation to the social media icons in the footer -*/ 
 .social-media {
@@ -66,16 +74,16 @@ nav .brand-logo:hover {
 }
 
 .card .books:hover {
-    box-shadow: 5px 5px 3px #64ffda;
+    box-shadow: 0 4px 8px 0 #64ffda, 0 6px 20px 0 #64ffda;
 }
 
 .card-content {
     height: 90px;
 }
 
-
-
 .btn-small {
     margin: 5px;    
 }
+
+
 
