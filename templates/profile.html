@@ -6,13 +6,87 @@
     <div class="row">
         <div class="col s12 m8 offset-m2">
             <div class="card-panel contrastBG white-text">                
-                <h3 class="center-align light-blue-text text-darken-4">
+                <h3 class="center-align white-text text-darken-4">
                     {{ username }}'s Profile
-                </h3>      
+                </h3>
             </div>
         </div>
     </div>
+    
+    {% if books|length > 0 %}
+    <div class="container wide-container">
+        <div class="row">
+            {% for book in books %}
+            <div class="col s12 m6 l4 offset-m1">
+                <div class="card books">
+                    <!-- Need to check with tutor support how to fix this -->
+                    <div class="card-image books waves-effect waves-block waves-light">
+                        <img class="activator" src="{{ book.image_url }}"
+                            onerror="this.onerror=null;this.src='/static/images/noimage.png';" />
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Expand review details<i
+                                class="fa fa-ellipsis-v right"></i></span>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4"><i class="fa fa-times right"></i></span>
+                        <h5>{{ book.book_title }}: by {{ book.author }}</h5>
+                        Genre: {{ book.genre_name }}<br>
+                        <i class="fas fa-star"></i> Rating: {{ book.book_rating }} /5<br>
+                        <p>
+                            Review: <br>
+                            {{ book.book_review }}
+                        </p>
+                        <p><em>by: {{ book.created_by }} </em></p>
+                        <!-- Remove and Edit buttons -->
+                        {% if session.user|lower == book.created_by|lower %}
+                        <a href="#checkmodal" class="btn-small red accent-4 modal-trigger">Delete</a>
+                        <a href="{{ url_for('edit_book', book_id=book._id) }}"
+                            class="btn-small light-blue accent-4">Edit</a>
+                        <!-- Warning to Delete Modal -->
+                        <div id="checkmodal" class="modal">
+                            <div class="modal-content">
+                                <h4>Warning</h4>
+                                <p>Are you sure you want to delete this review?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="{{ url_for('get_books') }}"
+                                    class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+                                <a href="{{ url_for('delete_book', book_id=book._id) }} "
+                                    class="modal-close waves-effect waves-green btn-flat">Delete</a>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% else %}    
+    
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="/static/images/noreview.png">
+                        <span class="card-title">Nothing submitted</span>                        
+                        <a class="btn-floating halfway-fab waves-effect waves-light red" href="{{ url_for('add_review') }}"><i
+                        class="material-icons fas fa-plus"></i></a>
+                    </div>
+                    <div class="card-content profile contrastBG">
+                        <span class="white-text center-align"> <h4>Add first review!</h4> 
+                        </span>                                                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 
+    {% endif %}
+        
 </div>
 
     <!-- Reminder: Need to add all reviews created by the user -->

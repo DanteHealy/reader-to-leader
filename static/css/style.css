@@ -24,6 +24,10 @@ body {
     max-width: 100%;
 }
 
+.profile {
+    height: 0px;
+}
+
 /*- move the brand logo class item to the right by applying padding add hover animation -*/ 
 nav .brand-logo {
     padding-left: 20px;
