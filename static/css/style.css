@@ -1,6 +1,7 @@
 /*- background and text colour scheme -*/ 
 body {    
     color: black;
+    font-family: 'Barlow', sans-serif;
 }
 
 /*- apply shading on the elements -*/ 
@@ -25,7 +26,11 @@ body {
 }
 
 .profile {
-    height: 0px;
+    margin-top: 0px;    
+}
+
+.btn-large, .btn, .btn-small {
+    border-radius: 30px;
 }
 
 /*- move the brand logo class item to the right by applying padding add hover animation -*/ 
