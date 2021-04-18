@@ -12,13 +12,15 @@
             </div>
         </div>
     </div>
+
+    <h3 class="center-align">My reviews:</h3>
     
     {% if books|length > 0 %}
     <div class="container wide-container">
         <div class="row">
             {% for book in books %}
             <div class="col s12 m6 l4 offset-m1">
-                <div class="card hoverable books">
+                <div class="card large hoverable books">
                     <!-- Need to check with tutor support how to fix this -->
                     <div class="card-image books waves-effect waves-block waves-light">
                         <img class="activator" src="{{ book.image_url }}"
