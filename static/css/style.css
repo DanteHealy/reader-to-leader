@@ -61,9 +61,6 @@ nav ul a:hover {
     width: 100%;
 }
 
-
-
-
 /*- add styling and animation to the social media icons in the footer -*/ 
 .social-media {
     margin: 10px;
@@ -82,13 +79,14 @@ nav ul a:hover {
 /*- styling and sizing the book review cards -*/ 
 
 .card-image .books {
-    height: 600px;
-    width: 100%;
+    /* height: 600px; */
+    height: 100%;
+    width: auto;
 }
 
-.card .books {
+/* .card .books {
     height: 600px;
-}
+} */
 
 .card-content {
     height: 90px;

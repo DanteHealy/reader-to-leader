@@ -28,16 +28,16 @@
     </div>
 
     {% if books|length > 0 %}
-    <div class="container wide-container">        
+    <div class="container wide-container">
         <div class="row">
         {% for book in books %}
-            <div class="col s12 m4">
-                <div class="card hoverable books">
+            <div class="col s12 m6 l4">
+                <div class="card large hoverable books">
                     <!-- Need to check with tutor support how to fix this -->
                     <div class="card-image books waves-effect waves-block waves-light">                        
                         <img class="activator" src="{{ book.image_url }}"  onerror="this.onerror=null;this.src='/static/images/noimage.png';" />
                     </div>
-                    <div class="card-content">                        
+                    <div class="card-action">
                         <span class="card-title activator grey-text text-darken-4">Expand review details<i class="fa fa-ellipsis-v right"></i></span>                        
                     </div>
                     <div class="card-reveal">                        
