@@ -2,16 +2,18 @@
 body {    
     color: black;
     font-family: 'Barlow', sans-serif;
+    display: flex;  /*- ensure footer stays at bottom of the page -*/ 
+    min-height: 100vh;   /*- ensure footer stays at bottom of the page -*/ 
+    flex-direction: column;  /*- ensure footer stays at bottom of the page -*/ 
 }
+
+main {
+    flex: 1 0 auto;  /*- ensure footer stays at bottom of the page -*/ 
+  }
 
 /*- apply shading on the elements -*/ 
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-
-/*- make navbar transparent  (not sure if I'll use this on the navbar) -*/ 
-.transparentBG {
-  background-color: rgba(0,0,0,0);
 }
 
 /*- make navbar complementary brown -*/ 
@@ -29,6 +31,7 @@ body {
     margin-top: 0px;    
 }
 
+/*- convert buttons to pill by rounding edges -*/ 
 .btn-large, .btn, .btn-small {
     border-radius: 30px;
 }
@@ -58,6 +61,9 @@ nav ul a:hover {
     width: 100%;
 }
 
+
+
+
 /*- add styling and animation to the social media icons in the footer -*/ 
 .social-media {
     margin: 10px;
@@ -67,11 +73,13 @@ nav ul a:hover {
     color: #64ffda;    
     transform:scale(1.3);
     transition: transform .7s; /* Animation */
-}
+} 
 
 .flashes h4 {
     line-height: 2;
 }
+
+/*- styling and sizing the book review cards -*/ 
 
 .card-image .books {
     height: 600px;
@@ -80,10 +88,6 @@ nav ul a:hover {
 
 .card .books {
     height: 600px;
-}
-
-.card .books:hover {
-    box-shadow: 0 4px 8px 0 #64ffda, 0 6px 20px 0 #64ffda;
 }
 
 .card-content {
