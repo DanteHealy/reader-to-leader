@@ -25,13 +25,33 @@
                             maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate white-text" required>
                         <label for="password">Password</label>
                     </div>
+                </div>                
+                <!-- Terms and Conditions -->
+                <div class="row">
+                    <div class="col s12">
+                        <p class="center-align">
+                            By signing up you agree to our
+                            <a href="#checkmodal" class="teal-text text-accent-2 modal-trigger">terms and conditions.</a>
+                        </p>
+                        <!-- Terms and Conditions Modal -->
+                            <div id="checkmodal" class="modal">
+                                <div class="modal-content contrastBG">
+                                    <h4>Registration: Terms and Conditions</h4>
+                                    <embed src="/static/documents/disclaimer.pdf"
+                                        frameborder="0" width="100%" height="400px">
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#" class="modal-close waves-effect waves-green btn-flat">Close</a>                                    
+                                </div>
+                            </div>
+                    </div>
                 </div>
                 <!-- register button -->
                 <div class="row">
                     <button type="submit" class="col s12 m4 offset-m4 btn-large light-blue darken-1 text-shadow">
                         Register <i class="fas fa-sign-in-alt"></i>
                     </button>
-                </div>
+                </div>                          
             </div>
         </form>
     </div>

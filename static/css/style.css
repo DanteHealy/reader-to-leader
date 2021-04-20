@@ -78,22 +78,16 @@ nav ul a:hover {
 
 /*- styling and sizing the book review cards -*/ 
 
-/* .card .large {
-    /* height: 600px; 
-    height: 550px;
-    width: 70%;
-} */
-
 .card.large .card-image {
     max-height: 85%;
-    max-width: 70%;
+    max-width: 70%;    
     margin-left: auto;
     margin-right: auto;
 }
 
-/* .card .books {
-    height: 600px;
-} */
+.card .card-image img {
+    top: 5px;
+}
 
 .card-content {
     height: 90px;
