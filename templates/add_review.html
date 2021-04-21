@@ -62,6 +62,16 @@
                     <label for="image_url">Image URL</label>
                 </div>
             </div>
+            <!-- buy link -->
+            {% if session.user|lower == "admin"|lower %}
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-shopping-basket prefix light-blue-text text-darken-4"></i>
+                        <input id="buy_link" name="buy_link" type="text" class="validate">
+                        <label for="buy_link">Add affiliate link</label>
+                    </div>
+                </div>
+            {% endif %}
             <!-- submit button -->
             <div class="row">
                 <div class="col s12 center-align">

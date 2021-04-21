@@ -5,76 +5,88 @@
 
     <h3 class="white header center-align">Book Reviews</h3>
 
-    <div class="row">        
+    <div class="row">
         <div class="col s12 m6 offset-m3 card-panel grey lighten-5">
-        <form action="{{ url_for('search') }}" method="post" class="col s12">
-            <div class="row valign-wrapper center-align">
-                <div class="input-field col s12">
-                    <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
-                    <input type="text" name="query" id="query" minlength="3" class="validate" required>
-                    <label for="query">Search Book Titles, Genres and Reviews</label>
+            <form action="{{ url_for('search') }}" method="post" class="col s12">
+                <div class="row valign-wrapper center-align">
+                    <div class="input-field col s12">
+                        <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+                        <input type="text" name="query" id="query" minlength="3" class="validate" required>
+                        <label for="query">Search Book Titles, Genres and Reviews</label>
+                    </div>
                 </div>
-            </div>
-            <div class="row valign-wrapper center-align">
-                <div class="col s12">
-                    <a href="{{ url_for('get_books') }}" class="red btn text-shadow"><i class="fas fa-sync left"></i> Reset</a>
-                    <button type="submit" class="light-blue darken-1 btn text-shadow">
-                        <i class="fas fa-search left"></i> Search
-                    </button>
+                <div class="row valign-wrapper center-align">
+                    <div class="col s12">
+                        <a href="{{ url_for('get_books') }}" class="red btn text-shadow"><i
+                                class="fas fa-sync left"></i> Reset</a>
+                        <button type="submit" class="light-blue darken-1 btn text-shadow">
+                            <i class="fas fa-search left"></i> Search
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
         </div>
     </div>
 
     {% if books|length > 0 %}
     <div class="container wide-container">
         <div class="row">
-        {% for book in books %}
+            {% for book in books %}
             <div class="col s12 m6 l4">
                 <div class="card large hoverable books">
                     <!-- Need to check with tutor support how to fix this -->
-                    <div class="card-image books waves-effect waves-block waves-light">                        
-                        <img class="activator" src="{{ book.image_url }}"  onerror="this.onerror=null;this.src='/static/images/noimage.png';" />
+                    <div class="card-image books waves-effect waves-block waves-light">
+                        <img class="activator" src="{{ book.image_url }}"
+                            onerror="this.onerror=null;this.src='/static/images/noimage.png';" />
                     </div>
                     <div class="card-action">
-                        <span class="card-title activator grey-text text-darken-4">Expand review details<i class="fa fa-ellipsis-v right"></i></span>                        
+                        <span class="card-title activator grey-text text-darken-4">Expand review details<i
+                                class="fa fa-ellipsis-v right"></i></span>
                     </div>
-                    <div class="card-reveal">                        
+                    <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4"><i class="fa fa-times right"></i></span>
                         <h5>{{ book.book_title }}: by {{ book.author }}</h5>
                         Genre: {{ book.genre_name }}<br>
                         <i class="fas fa-star"></i> Rating: {{ book.book_rating }} /5<br>
                         <p>
-                            Review: <br> 
+                            Review: <br>
                             {{ book.book_review }}
                         </p>
                         <p><em>by: {{ book.created_by }} </em></p>
-                        <!-- Remove and Edit buttons -->
-                        {% if session.user|lower == book.created_by|lower %}
-                            <a href="#checkmodal" class="btn-small red accent-4 modal-trigger">Delete</a>
-                            <a href="{{ url_for('edit_book', book_id=book._id) }}" class="btn-small light-blue accent-4">Edit</a>
-                            <!-- Warning to Delete Modal -->
-                            <div id="checkmodal" class="modal">
-                                <div class="modal-content">
-                                    <h4>Warning</h4>
-                                    <p>Are you sure you want to delete this review?</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <a href="{{ url_for('get_books') }}" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
-                                    <a href="{{ url_for('delete_book', book_id=book._id) }} " class="waves-effect waves-green btn-flat">Delete</a>
-                                </div>
-                            </div>
+                        <!-- Buy, Remove and Edit buttons with Admin having full access -->
+                        {% if session.user|lower == book.created_by|lower or session.user|lower == "admin"|lower %}
+                        <!-- {% if book.buy_link %} -->
+                        <a href="{{ book.buy_link }}" class="btn-small green waves-effect waves-green"
+                            target="_blank">Buy</a>
+                        <!-- {% endif %} -->
+                        <a href="#a{{ book._id }}" class="btn-small red accent-4 modal-trigger">Delete</a>
+                        <a href="{{ url_for('edit_book', book_id=book._id) }}"
+                            class="btn-small light-blue accent-4">Edit</a>
                         {% endif %}
                     </div>
                 </div>
+            
+            <!-- Warning to Delete Modal -->
+            <div id="a{{ book._id }}" class="modal">
+                <div class="modal-content">
+                    <h4>Warning</h4>
+                    <p>Are you sure you want to delete this review?</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="{{ url_for('get_books') }}" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+                    <a href="{{ url_for('delete_book', book_id=book._id) }} " class="waves-effect waves-green btn-flat">Delete</a>
+                </div>
             </div>
-        {% endfor %}
-        </div>        
+            
+            </div>
+            {% endfor %}
+        </div>
     </div>
-    {% else %}    
+    {% else %}
     <h3 class="red text-darken-4 center-align">No Results Found</h3>
     {% endif %}
+
+    
 
 </div>
 

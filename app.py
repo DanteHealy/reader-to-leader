@@ -127,6 +127,7 @@ def add_review():
             "book_review": request.form.get("book_review"),
             "book_rating": request.form.get("book_rating"),
             "image_url": request.form.get("image_url"),
+            "buy_link": request.form.get("buy_link"),
             "created_by": session["user"]
         }
         mongo.db.books.insert_one(books)
@@ -147,6 +148,7 @@ def edit_book(book_id):
             "book_review": request.form.get("book_review"),
             "book_rating": request.form.get("book_rating"),
             "image_url": request.form.get("image_url"),
+            "buy_link": request.form.get("buy_link"),
             "created_by": session["user"]
         }
         mongo.db.books.update({"_id": ObjectId(book_id)}, submit)
