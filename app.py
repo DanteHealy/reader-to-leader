@@ -257,6 +257,21 @@ def delete_genre(genre_id):
     return redirect(url_for("login"))
 
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template("error.html"), 404
+
+
+@app.errorhandler(500)
+def internal_error(e):
+    return render_template("error.html"), 500
+
+
+@app.errorhandler(503)
+def service_unavailable(e):
+    return render_template("error.html"), 503
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
