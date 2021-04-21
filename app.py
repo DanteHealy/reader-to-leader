@@ -23,7 +23,7 @@ mongo = PyMongo(app)
 
 @app.route("/")
 @app.route("/home_page")
-def home_page():    
+def home_page():
     return render_template("index.html") 
 
 
@@ -106,7 +106,7 @@ def profile(username):
             return render_template("profile.html", books=books, username=username)
 
         return redirect(url_for("get_books"))
-        
+
     return redirect(url_for("login"))
 
 
@@ -226,7 +226,7 @@ def add_genre():
 def edit_genre(genre_id):
     if "user" in session: 
         if session["user"] == "admin":
-    
+
             if request.method == "POST":
                 submit = {
                     "genre_name": request.form.get("genre_name")
