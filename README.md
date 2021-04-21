@@ -1,4 +1,4 @@
-![Am I responsive image](#)
+(![Am I responsive image](https://github.com/DanteHealy/reader-to-leader/blob/master/static/images/amIresponsive.GIF)
 
 # Read to Lead 
 
@@ -35,8 +35,8 @@ This is achieved by:
 -	Create book reviews for others to read 
 -	Access links to purchase the books they are interested in
 
-#### User Stories
 
+#### User Stories
 New visitor
 -	As a user I can see a navigation bar at the top of the page where I can navigate to the available pages. 
 -	As a user I can see the site name or brand logo in the navigation bar. 
@@ -136,31 +136,31 @@ Favicon: https://favicon.io/
 
 ### Testing 
 
-
+~Information to be added 
 
 
 
 ### Deployment 
 
+~Information to be added 
 
 
 
 ### Credits 
 
+~Information to be added 
 
 
 
 #### Contents
 
+~Information to be added 
+
 
 
 #### Acknowledgements
 
-
-
-
-
-
+~Information to be added 
 
 
 
