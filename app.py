@@ -99,18 +99,19 @@ def login():
 def profile(username):
     # grab the session user's username from db
     if "user" in session:
-
         username = mongo.db.users.find_one(
             {"username": session["user"]})["username"]
-        books = list(mongo.db.books.find({"created_by": username}))
-        if session["user"]:
+        if session["user"] == username:
+            books = list(mongo.db.books.find({"created_by": username}))
             return render_template("profile.html", books=books, username=username)
 
+        return redirect(url_for("get_books"))
+        
     return redirect(url_for("login"))
 
 
 @app.route("/logout")
-def logout():
+def logout():    
     # remove user from session cookies
     flash("You have been logged out")
     session.pop("user")
@@ -119,91 +120,141 @@ def logout():
 
 @app.route("/add_review", methods=["GET", "POST"])
 def add_review():
-    if request.method == "POST":
-        books = {
-            "genre_name": request.form.get("genre_name"),
-            "book_title": request.form.get("book_title"),
-            "author": request.form.get("author"),
-            "book_review": request.form.get("book_review"),
-            "book_rating": request.form.get("book_rating"),
-            "image_url": request.form.get("image_url"),
-            "buy_link": request.form.get("buy_link"),
-            "created_by": session["user"]
-        }
-        mongo.db.books.insert_one(books)
-        flash("Review Successfully Added")
-        return redirect(url_for("get_books"))
+    if "user" in session: 
+        if request.method == "POST":
+            books = {
+                "genre_name": request.form.get("genre_name"),
+                "book_title": request.form.get("book_title"),
+                "author": request.form.get("author"),
+                "book_review": request.form.get("book_review"),
+                "book_rating": request.form.get("book_rating"),
+                "image_url": request.form.get("image_url"),
+                "buy_link": request.form.get("buy_link"),
+                "created_by": session["user"]
+            }
+            mongo.db.books.insert_one(books)
+            flash("Review Successfully Added")
+            return redirect(url_for("get_books"))
 
-    genres = mongo.db.genres.find().sort("genre_name", 1)
-    return render_template("add_review.html", genres=genres)
+        genres = mongo.db.genres.find().sort("genre_name", 1)
+        return render_template("add_review.html", genres=genres)
+
+    return redirect(url_for("login"))
 
 
 @app.route("/edit_book/<book_id>", methods=["GET", "POST"])
 def edit_book(book_id):
-    if request.method == "POST":
-        submit = {
-            "genre_name": request.form.get("genre_name"),
-            "book_title": request.form.get("book_title"),
-            "author": request.form.get("author"),
-            "book_review": request.form.get("book_review"),
-            "book_rating": request.form.get("book_rating"),
-            "image_url": request.form.get("image_url"),
-            "buy_link": request.form.get("buy_link"),
-            "created_by": session["user"]
-        }
-        mongo.db.books.update({"_id": ObjectId(book_id)}, submit)
-        flash("Review Successfully Updated")
+    if "user" in session: 
+        username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+        book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
+        if book["created_by"] == username or session["user"] == "admin":
+            if request.method == "POST":
+                submit = {
+                    "genre_name": request.form.get("genre_name"),
+                    "book_title": request.form.get("book_title"),
+                    "author": request.form.get("author"),
+                    "book_review": request.form.get("book_review"),
+                    "book_rating": request.form.get("book_rating"),
+                    "image_url": request.form.get("image_url"),
+                    "buy_link": request.form.get("buy_link"),
+                    "created_by": session["user"]
+                }
+                mongo.db.books.update({"_id": ObjectId(book_id)}, submit)
+                flash("Review Successfully Updated")
 
-    book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
-    genres = mongo.db.genres.find().sort("genre_name", 1)
-    return render_template("edit_review.html", book=book, genres=genres)
+            genres = mongo.db.genres.find().sort("genre_name", 1)
+            return render_template(
+                "edit_review.html", book=book, 
+                genres=genres)
+
+        return redirect(url_for("get_books"))
+
+    return redirect(url_for("login"))
 
 
 @app.route("/delete_book/<book_id>")
 def delete_book(book_id):
-    mongo.db.books.remove({"_id": ObjectId(book_id)})
-    flash("Book Review Successfully Deleted")
-    return redirect(url_for("get_books"))
+    if "user" in session: 
+        username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+        book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
+        if book["created_by"] == username or session["user"] == "admin":
+
+            mongo.db.books.remove({"_id": ObjectId(book_id)})
+            flash("Book Review Successfully Deleted")
+            return redirect(url_for("get_books"))
+
+        return redirect(url_for("get_books"))
+
+    return redirect(url_for("login"))
 
 
 @app.route("/get_genres")
 def get_genres():
-    genres = list(mongo.db.genres.find().sort("genre_name", 1))
-    return render_template("genres.html", genres=genres)
+    if "user" in session: 
+        if session["user"] == "admin":
+
+            genres = list(mongo.db.genres.find().sort("genre_name", 1))
+            return render_template("genres.html", genres=genres)
+
+        return redirect(url_for("get_books"))
+
+    return redirect(url_for("login"))
 
 
 @app.route("/add_genre", methods=["GET", "POST"])
 def add_genre():
-    if request.method == "POST":
-        genre = {
-            "genre_name": request.form.get("genre_name")
-        }
-        mongo.db.genres.insert_one(genre)
-        flash("New Genre Added")
-        return redirect(url_for("get_genres"))
+    if "user" in session: 
+        if session["user"] == "admin":
+            if request.method == "POST":
+                genre = {
+                    "genre_name": request.form.get("genre_name")
+                }
+                mongo.db.genres.insert_one(genre)
+                flash("New Genre Added")
+                return redirect(url_for("get_genres"))
 
-    return render_template("add_genre.html")
+            return render_template("add_genre.html")
+
+        return redirect(url_for("get_books"))
+
+    return redirect(url_for("login"))
 
 
 @app.route("/edit_genre/<genre_id>", methods=["GET", "POST"])
 def edit_genre(genre_id):
-    if request.method == "POST":
-        submit = {
-            "genre_name": request.form.get("genre_name")
-        }
-        mongo.db.genres.update({"_id": ObjectId(genre_id)}, submit)
-        flash("Genre Successfully Updated")
-        return redirect(url_for("get_genres"))
+    if "user" in session: 
+        if session["user"] == "admin":
+    
+            if request.method == "POST":
+                submit = {
+                    "genre_name": request.form.get("genre_name")
+                }
+                mongo.db.genres.update({"_id": ObjectId(genre_id)}, submit)
+                flash("Genre Successfully Updated")
+                return redirect(url_for("get_genres"))
 
-    genre = mongo.db.genres.find_one({"_id": ObjectId(genre_id)})
-    return render_template("edit_genre.html", genre=genre)
+            genre = mongo.db.genres.find_one({"_id": ObjectId(genre_id)})
+            return render_template("edit_genre.html", genre=genre)
+
+        return redirect(url_for("get_books"))
+
+    return redirect(url_for("login"))
 
 
 @app.route("/delete_genre/<genre_id>")
 def delete_genre(genre_id):
-    mongo.db.genres.remove({"_id": ObjectId(genre_id)})
-    flash("Genre Successfully Deleted")
-    return redirect(url_for("get_genres"))
+    if "user" in session: 
+        if session["user"] == "admin":
+
+            mongo.db.genres.remove({"_id": ObjectId(genre_id)})
+            flash("Genre Successfully Deleted")
+            return redirect(url_for("get_genres"))
+
+        return redirect(url_for("get_books"))
+
+    return redirect(url_for("login"))
 
 
 if __name__ == "__main__":
