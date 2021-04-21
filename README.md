@@ -1,4 +1,4 @@
-(![Am I responsive image](https://github.com/DanteHealy/reader-to-leader/blob/master/static/images/amIresponsive.GIF)
+![Am I responsive image](https://github.com/DanteHealy/reader-to-leader/blob/master/static/images/amIresponsive.GIF)
 
 # Read to Lead 
 
