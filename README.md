@@ -62,30 +62,30 @@ Please note: That the affiliate links are for demonstration purposes only to dem
 #### Wireframes
 
 Initial
-I designed the wireframes using Balsamiq for the basic layout and structure. 
--	Home page. 
+I designed the wireframes using [Balsamiq](../static/documents/ms3-book-review-wireframes.pdf) for the basic layout and structure. 
+-	Home page 
 -	Book reviews 
--	Add review page 
 -	Register
 -	Login 
--	Add review 
--	Manage categories 
+-	Manage genres
+-	Add review page 
+-	Edit reviews 
 
 Final 
-The final mock ups were created using Canva to get a high fidelity view of how the final 
-version and key elements might appear before commencing with the code. 
+The final mock ups were created using [Canva](../static/documents/milestone-3-canva-mockup.pdf) to get a high fidelity view of how the final 
+version and key elements might appear before starting to code the site. 
 -	Homepage
+-	Book reviews 
+-	Book card 
 -	Register
 -	Login
--	Book reviews 
--	Add review / Add genre
--	Book card 
 
 
 #### Design Features 
 
 Font
 I chose Barlow sans-serif for a clean look and feel like the body of a modern non-fiction or text book. 
+
 Colour scheme selection: 
 https://grasshopper.com/resources/tools/branding-color-quiz/
 
@@ -103,6 +103,14 @@ Be careful, as some shades of blue can be perceived as depressing and cold.” (
 To get the right shade of blue I used the colour wheel to find a suitable blue shade that contrasted well with the brown tint of my bookstore image 
 which I obtained from Canva’s colour wheel: 
 https://www.canva.com/colors/color-wheel/
+
+
+Home page
+I used royalty-free images from Canva to create the feel of a traditional bookstore where the user might imagine going to buy a good non-fiction book like a Waterstones. 
+
+
+
+
 
 Profile Page
 A blank card showing that there are no reviews with a button taking the user to the add review page. 

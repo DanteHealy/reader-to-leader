@@ -1,8 +1,6 @@
-# Taking cues from the "task manager" mini project. 
-
 import os
 from flask import (
-    Flask, flash, render_template, 
+    Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -24,18 +22,29 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/home_page")
 def home_page():
-    return render_template("index.html") 
+    return render_template("index.html")
 
 
 @app.route("/")
 @app.route("/get_books")
 def get_books():
     books = list(mongo.db.books.find())
-    return render_template("books.html", books=books) 
+    return render_template("books.html", books=books)
 
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    """search:
+    *   Queries database for strings entered in search bar.
+
+    \n Args:
+    *   None.
+
+    \n Returns:
+    *   Template with the search query filtering books\
+    containing search words.
+    """
+
     query = request.form.get("query")
     books = list(mongo.db.books.find({"$text": {"$search": query}}))
     return render_template("books.html", books=books)
@@ -43,6 +52,19 @@ def search():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """register:
+    * Checks if username exists in db.
+    * Will return user to registration page with a flash\
+    error message if user not new.
+
+    \n Args:
+    *   None.
+
+    \n Returns:
+    *   user profile template if successful.
+    *   register page with flash displaying error if unsuccessful.
+    """
+
     if request.method == "POST":
         # check if username already exists in db
         existing_user = mongo.db.users.find_one(
@@ -68,6 +90,19 @@ def register():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """login:
+    * Checks if username exists in db.
+    * Logs user in if credentials match.
+    * Appends username to session['user'] cookie.
+
+    \n Args:    
+    *   None.
+
+    \n Returns:    
+    *   User profile template if successful.
+    *   Login page with flash displaying error if unsuccessful.
+    """
+
     if request.method == 'POST':
         # check if username exists in db
         existing_user = mongo.db.users.find_one(
