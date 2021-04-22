@@ -91,6 +91,9 @@ https://grasshopper.com/resources/tools/branding-color-quiz/
 
 My responses were geared toward my target audience who are professionals seeking clear guidance which provides certainty in their career and personal growth decisions. 
 
+Colour scheme
+![color scheme](https://github.com/DanteHealy/reader-to-leader/blob/master/static/images/colors.gif)
+
 “Blue is a trusting and secure colour, conjuring up the feeling of calm and even spirituality. 
 It's often used in corporate designs and is well-known as a favourite colour. Blue is loyal, dependable, 
 and it's a great colour to use if you want your customers to trust you. 
@@ -112,9 +115,9 @@ Languages : HTML, CSS, JavaScript and Python
 Database : MongoDB Atlas
 
 Libraries
--	MaterializeCSS: Documentation - Materialize (materializecss.com)
--	JQuery:  https://jquery.com/
--	Werkzeug (webpage security): Werkzeug — Werkzeug Documentation (1.0.x) (palletsprojects.com)
+-	MaterializeCSS: https://materializecss.com/
+-	JQuery: https://jquery.com/
+-	Werkzeug (webpage security): https://werkzeug.palletsprojects.com/en/1.0.x/ 
 -	Flask: https://www.fullstackpython.com/flask.html
 -	Jinja: https://jinja.palletsprojects.com/en/2.11.x/
 -	PyMongo: https://pymongo.readthedocs.io/en/stable/
