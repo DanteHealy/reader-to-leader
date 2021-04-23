@@ -181,7 +181,7 @@ Click on the add genre button takes you to the form field where admin enters a n
 
 The 'Register' page contains a card where a new user can enter their user name and password credentials. 
 
-!register](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/22-register-card.GIF)
+![register](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/22-register-card.GIF)
 
 
 Just above the register button there are terms and conditions which trigger a popup modal with the terms and conditions. 
@@ -191,7 +191,7 @@ Just above the register button there are terms and conditions which trigger a po
 
 The Terms and Conditions also allows for mobile users. 
 
-![T&C mobile](#)
+![T&C mobile](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/28-register-t%26c-modal-mobile.gif)
 
 
 ##### User's profile Page
@@ -203,7 +203,7 @@ The profile page has the user's published reviews.
 
 Where no reviews are submitted the user's profile will have a blank card showing that there are no reviews and a button taking the user to the add review page. 
 
-![profile no review card](#)
+![profile no review card](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/29-profile-no-review.gif)
 
 
 ##### Defensive programming
@@ -290,6 +290,10 @@ The [database architecture](https://github.com/DanteHealy/reader-to-leader/blob/
 Using MongoDB I was able to create the empty collections with all data entered and created via the website's frontend. 
 
 
+#### Project Management 
+
+(Comment on the use of GitHub Projects etc. - Create a manual kanban board to track features and monitor bug fixes.)
+
 
 ### Testing 
 
@@ -329,7 +333,12 @@ Guidance on some of the features and functions was obtained via YouTube.
 
 #### Acknowledgements
 
-I would like to give a huge and sincere thank you to Simon Vardy, Sam Laubscher, Michael Standen and my mentor Adegbenge Adeye. 
+I would like to give a huge and sincere thank you to: 
+
+- Simon Vardy, Sam Laubscher, Michael Standen for their continued support and encouragement,  
+- Ulysees Ryan-Flynn for the excellent Tutor support, patience and understanding of my personal circumstances, 
+- My mentor Adegbenge Adeye and CI Tutor support for the technical guidance 
+
 They have been super supportive during this project and I appreciate their feedback and advice which helped to get this site to this final state.
 
 

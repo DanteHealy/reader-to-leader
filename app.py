@@ -431,6 +431,7 @@ def service_unavailable(e):
     return render_template("error.html"), 503
 
 
+# Reminder: change to debug=False before submission!
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
