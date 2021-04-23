@@ -117,7 +117,6 @@ The home page includes a responsive navbar.
 ![home page bottom](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/02-home.gif)
 
 
-##### Footer
 Includes basic contact details plus social media icons. 
 
 ![footer](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/03-footer.gif)
@@ -150,22 +149,106 @@ If its the user who created the review or admin then the edit and delete opion b
 ![book card open all buttons](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/08-card-open-login.gif)
 
 
-On the add review page a user who is logged in will have a form card to complete and submit your review. 
+##### Add Review Page
+
+On the add review page a user who is logged in will have a form card to complete and submit a review. 
 
 ![add review](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/09-review-card.gif)
 
 
+##### Edit Review Page
+
+The author or admin can also edit the review from the edit button on the book card. 
+
+![edit reviews](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/12-edit-review.gif)
 
 
-![book card open]()
+##### Manage Genres Page
 
-![book card open]()
+For admin the Manage genres page will enable the maintenance of the genres table. 
+
+![manage genres page](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/10-manage-genres.gif)
 
 
+##### Add Genre Page
+
+Click on the add genre button takes you to the form field where admin enters a new genre. 
+
+![add genre](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/11-add-genres.gif)
 
 
-Profile Page
-A blank card showing that there are no reviews with a button taking the user to the add review page. 
+##### Register new user page
+
+The 'Register' page contains a card where a new user can enter their user name and password credentials. 
+
+!register](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/22-register-card.GIF)
+
+
+Just above the register button there are terms and conditions which trigger a popup modal with the terms and conditions. 
+
+![Terms and Conditions](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/23-register-t%26c-modal.gif)
+
+
+The Terms and Conditions also allows for mobile users. 
+
+![T&C mobile](#)
+
+
+##### User's profile Page
+
+The profile page has the user's published reviews. 
+
+![profile page](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/26-profile-page.gif)
+
+
+Where no reviews are submitted the user's profile will have a blank card showing that there are no reviews and a button taking the user to the add review page. 
+
+![profile no review card](#)
+
+
+##### Defensive programming
+
+When clicking delete on a book review the user is provided with a pop up modal warning asking to confirm the delete action. 
+
+![delete review modal](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/18-delete-warn-modal.gif)
+
+The same applies to admin when trying to delete a genre. 
+
+
+The same error message appears for 404, 500 and 503 errors. With a button allowing the reader to return to the main page. 
+
+![site error message](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/27-site-error.GIF)
+
+
+Trying to force break to access unauthorised areas of the website the programme will take the user to the login page. 
+
+![login card](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/21-login-card.gif)
+
+This applies to all CRUD functions that no unauthorised user can modify another user's work. 
+The exception is with the admin user profile which is required to apply links to the buy buttoms on the reviews and edit 
+or delete any inappropriate content if users violate the community's terms and conditions. 
+
+
+##### Alerts
+
+Various alerts appear across the website confirming where user actions were successful: 
+
+![added review alert](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/13-review-add-alert.gif)
+
+![review updated alert](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/14-review-update-alert.gif)
+
+![genre added alert](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/15-genre-add-alert.gif)
+
+![genre updated alert](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/16-genre-update-alert.gif)
+
+![book deleted alert](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/19-book-delete-alert.gif)
+
+![genre deleted alert](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/20-genre-delete-alert.gif)
+
+![login successful alert](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/24-login-alert.gif)
+
+![logout successful alert](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/25-logout-alert.gif)
+
 
 
 ### Technologies Used
@@ -193,13 +276,38 @@ Favicon: https://favicon.io/
 
 ### Site Construction 
 
-~Information to be added 
+##### Site Layout 
+
+The [site structure and jinja template relationship](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/site-design.pdf) are stored in this pdf. 
+
+Basic layout includes the the web pages and interactive elements (cards) indicating user access privileges. 
+
+
+#### Database architecture
+
+The [database architecture](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/data-model.pdf) can be found here. 
+
+Using MongoDB I was able to create the empty collections with all data entered and created via the website's frontend. 
 
 
 
 ### Testing 
 
-~Information to be added 
+System testing: 
+
+
+Manual testing: 
+
+
+Bugs identified
+
+ - Fixed 
+
+
+
+ - Still remaining 
+
+
 
 
 
@@ -211,19 +319,18 @@ Favicon: https://favicon.io/
 
 ### Credits 
 
-~Information to be added 
+#### Content
 
+Parts of the code were re-used from the Take Manager mini-project from the Data Centric module plus with my own additional code. 
+A lot of the styling was taken from materializecss and the images used were from Canva. 
 
-
-#### Contents
-
-~Information to be added 
-
+Guidance on some of the features and functions was obtained via YouTube. 
 
 
 #### Acknowledgements
 
-~Information to be added 
+I would like to give a huge and sincere thank you to Simon Vardy, Sam Laubscher, Michael Standen and my mentor Adegbenge Adeye. 
+They have been super supportive during this project and I appreciate their feedback and advice which helped to get this site to this final state.
 
 
 
