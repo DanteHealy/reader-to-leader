@@ -53,7 +53,9 @@ Returning site visitor
 -	As a user I want to ensure that when I delete a book review I am asked for confirmation before confirming final delete. 
 Site Owner / Site Administrator
 -	As a site owner I want the user to be able to log out of their account. 
--	As a site owner I want an admin account to administer the site content and
+-	As a site owner I want an admin account to control the site content by;
+        1. Adding links where users can purchase the books (affiliate links possible, but I have not used affiliate links as this is for demonstration purposes only)
+        2. Delete book reviews if they have content which violates the terms and conditions of the site. 
 -	As a site administrator I want to be able to add, edit and delete the genre topics associated with the book reviews. 
 -	As a site owner, I want the site administrator to be able to apply links to reviews through which visitors can purchase the books relating to reviews they liked (potentially monetising through the use of affiliate links).                                                                                                                              
 Please note: That the affiliate links are for demonstration purposes only to demonstrate how the site could be potentially be funded and are not actual affiliate links. 
@@ -62,7 +64,7 @@ Please note: That the affiliate links are for demonstration purposes only to dem
 #### Wireframes
 
 Initial
-I designed the wireframes using [Balsamiq](../static/documents/ms3-book-review-wireframes.pdf) for the basic layout and structure. 
+I designed the wireframes using [Balsamiq](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/ms3-book-review-wireframes.pdf) for the basic layout and structure. 
 -	Home page 
 -	Book reviews 
 -	Register
@@ -72,7 +74,7 @@ I designed the wireframes using [Balsamiq](../static/documents/ms3-book-review-w
 -	Edit reviews 
 
 Final 
-The final mock ups were created using [Canva](../static/documents/milestone-3-canva-mockup.pdf) to get a high fidelity view of how the final 
+The final mock ups were created using [Canva](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/milestone-3-canva-mockup.pdf) to get a high fidelity view of how the final 
 version and key elements might appear before starting to code the site. 
 -	Homepage
 -	Book reviews 
@@ -92,7 +94,7 @@ https://grasshopper.com/resources/tools/branding-color-quiz/
 My responses were geared toward my target audience who are professionals seeking clear guidance which provides certainty in their career and personal growth decisions. 
 
 Colour scheme
-![color scheme](https://github.com/DanteHealy/reader-to-leader/blob/master/static/images/colors.gif)
+![color scheme](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/colors.gif)
 
 “Blue is a trusting and secure colour, conjuring up the feeling of calm and even spirituality. 
 It's often used in corporate designs and is well-known as a favourite colour. Blue is loyal, dependable, 
@@ -105,9 +107,59 @@ which I obtained from Canva’s colour wheel:
 https://www.canva.com/colors/color-wheel/
 
 
-Home page
-I used royalty-free images from Canva to create the feel of a traditional bookstore where the user might imagine going to buy a good non-fiction book like a Waterstones. 
+##### Home page
+I used royalty-free images from Canva for a traditional bookstore where the user might imagine going to buy a good non-fiction book like a Waterstones. 
+The home page includes a responsive navbar. 
 
+![home page top](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/01-home.gif)
+
+
+![home page bottom](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/02-home.gif)
+
+
+##### Footer
+Includes basic contact details plus social media icons. 
+
+![footer](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/03-footer.gif)
+
+
+##### Book Review Page
+The page includes a search bar plus cards with the image of each book reviewed and a reveal function that shows the review details submitted by the user.
+
+![book review page](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/04-books.GIF)
+
+
+Search bar contains text input area plus reset and search buttons
+
+![search bar](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/05-search.gif)
+
+
+Each book card has hoverable to show which book is being targeted by the user. 
+
+![book card](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/06-card.gif)
+
+
+Opening the card on click reveals the review details. 
+
+![book card open](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/07-card-open.gif)
+
+
+Only the buy button will be available for users who did not create the review and are logged in or who are not admin. 
+If its the user who created the review or admin then the edit and delete opion buttons will also be available. 
+
+![book card open all buttons](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/08-card-open-login.gif)
+
+
+On the add review page a user who is logged in will have a form card to complete and submit your review. 
+
+![add review](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/09-review-card.gif)
+
+
+
+
+![book card open]()
+
+![book card open]()
 
 
 
