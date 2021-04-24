@@ -7,12 +7,13 @@ The intent of the website is to provide value to visitors by getting ideas on wh
 either solve specific problems and/or develop new skills. 
 
 
+---
 ## Contents
 
 To Be Updated
 
 
-
+---
 ## Site Goals
 
 The goal of the site is to allow visitors to read reviews created by registered users and to find inspiration for self-help books that they can read by topic. 
@@ -114,6 +115,7 @@ Environmental companies often choose green. It's the most popular color used in 
 your office green!"
 
 
+---
 ## Web Contents
 
 ### Home page
@@ -268,6 +270,7 @@ Various alerts appear across the website confirming where user actions were succ
 ![logout successful alert](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/25-logout-alert.gif)
 
 
+---
 ## Technologies Used
 
 ### Languages 
@@ -309,6 +312,7 @@ Favicon: Used to convert image to Favicon.
 Am I Responsive?: Used to view the website across multiple screen sizes simultaneously. 
 
 
+---
 ## Site Construction 
 
 ### Site Layout 
@@ -333,15 +337,16 @@ Insert Crud features.
 GitHub Projects was used to track key features and tasks using the kanban board feature. 
 
 
-## Testing 
+---
+## 5 Testing 
 
-System testing: 
-
-
-Manual testing: 
+### System testing: 
 
 
-Bugs identified
+### Manual testing: 
+
+
+### Bugs identified
 
  - Fixed 
 
@@ -351,17 +356,20 @@ Bugs identified
 
 
 
-## Heroku Deployment 
+---
+## 6 Heroku Deployment 
 
-The project was automatically deployed to Heroku from my GitHub repository. To achieve this the following steps were then taken: 
+The project was automatically deployed to Heroku from my GitHub repository. 
+To achieve this the following steps were taken: 
+
 1.	Within my Gitpod IDE create my .gitignore file set to ignore my virtual environment and then my env.py file. 
 2.	Within the gitignore file set it to ignore the ‘env.py’ file and ‘__pycache__/’ directory which is automatically generated. 
 3.	Set default environmental variables within the ‘env.py’ file. 
-    a.	os.environ.setdefault(“IP”, “0.0.0.0”)
-    b.	os.environ.setdefault(“PORT”, “5000”)
-    c.	os.environ.setdefault(“SECRET_KEY”, “YOUR_SECRET_KEY”)
-    d.	os.environ.setdefault(“MONGO_URI”, “mongodb+srv://root:YOURPASSWORD@YOUR-CLUSTER-NAME.2qobt.mongodb.net/YOUR-DATABASE-NAME?retryWrites=true&w=majority”
-    e.	os.environ.setdefault(“MONGO_DBNAME”, “YOUR_DATABASE_NAME”)
+    - os.environ.setdefault(“IP”, “0.0.0.0”)
+    - os.environ.setdefault(“PORT”, “5000”)
+    - os.environ.setdefault(“SECRET_KEY”, “YOUR_SECRET_KEY”)
+    - os.environ.setdefault(“MONGO_URI”, “mongodb+srv://root:YOURPASSWORD@YOUR-CLUSTER-NAME.2qobt.mongodb.net/YOUR-DATABASE-NAME?retryWrites=true&w=majority”
+    - os.environ.setdefault(“MONGO_DBNAME”, “YOUR_DATABASE_NAME”)
 
 4.	Save the ‘env.py’ file and open the ‘app.py’ file. Import OS and Flask and import ‘env.py’ 
 5.	Within the IDE's terminal window, create a requirements.txt file by typing pip3 freeze --local > requirements.txt, 
@@ -373,33 +381,36 @@ The project was automatically deployed to Heroku from my GitHub repository. To a
 11.	Type your repository name in the search box next to the dropdown box displaying your GitHub account name. When the repository appears, click Connect.
 12.	In the Settings tab, under the Config Vars section, click the Reveal Config Vars button.
 13.	Enter the key value pairs as per your env.py file as follows:
-    a.	Variable = “IP”: Value = “0.0.0.0”
-    b.	Variable = “PORT”: Value = “5000”
-    c.	Variable = “SECRET_KEY”: Value = “YOUR_SECRET_KEY”
-    d.	Variable = “MONGO_URI”: Value = “mongodb+srv://root:YOUR_PASSWORD@YOUR_CLUSTER_NAME.2qobt.mongodb.net/YOUR_DATABASE_NAME?retryWrites=true&w=majority”
-    e.	Variable = “MONGO_DBNAME”: Value = “YOUR_DATABASE_NAME”
-    f.	Variable = “DEBUG”: Value = “FALSE”
+    - Variable = “IP”: Value = “0.0.0.0”
+    - Variable = “PORT”: Value = “5000”
+    - Variable = “SECRET_KEY”: Value = “YOUR_SECRET_KEY”
+    - Variable = “MONGO_URI”: Value = “mongodb+srv://root:YOUR_PASSWORD@YOUR_CLUSTER_NAME.2qobt.mongodb.net/YOUR_DATABASE_NAME?retryWrites=true&w=majority”
+    - Variable = “MONGO_DBNAME”: Value = “YOUR_DATABASE_NAME”
+    - Variable = “DEBUG”: Value = “FALSE”
 
 14. Select the Deploy tab again and click Enable Automatic Deploys under the Automatic Deploys section. Below this is the Manual Deploy section. Select Master branch and click Deploy Branch.
 
-15. The app will now be built, and when its completed the message "Your app was successfully deployed" will be revealed. Click View to launch the deployed app.
+15. The app will now be built, and when its completed the message "Your app was successfully deployed" will be revealed. 
+
+16. Click "View" to launch the deployed app.
 
 
-## Credits 
+---
+## 7 Credits 
 
-### Content
+### 7.1 Content
 
-Parts of the code were re-used from the Take Manager mini-project from the Data Centric module plus with my own additional code. 
-A lot of the styling was taken from materializecss and the images used were from Canva. 
+Parts of the code were re-used from the Take Manager mini-project from the Data Centric module and some inspirational cues from Simon Vardy's project combioned with my own additional code and ideas for the site. 
+A lot of the styling was taken from materializecss and the images used for the home page were from the royalty free options in Canva. 
 
 Guidance on some of the features and functions was obtained via YouTube. 
 
 
-### Acknowledgements
+### 7.2 Acknowledgements
 
 I would like to give a huge and sincere thank you to: 
 
-- Simon Vardy, Sam Laubscher, Michael Standen for their continued support and encouragement,  
+- Simon Vardy, Sam Laubscher, and Michael Standen for their continued support and encouragement,  
 - Ulysees Ryan-Flynn for the excellent Tutor support, patience and understanding of my personal circumstances, 
 - My mentor Adegbenge Adeye and CI Tutor support for the technical guidance 
 
