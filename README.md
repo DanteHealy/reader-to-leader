@@ -2,7 +2,7 @@
 
 # Read to Lead 
 
-![Read to Lead](http://reader-to-leader-project.herokuapp.com/home_page) is a book review community website covering non-fiction books for for personal development.  
+[Read to Lead](http://reader-to-leader-project.herokuapp.com/home_page) is a book review community website covering non-fiction books for for personal development.  
 The intent of the website is to provide value to visitors by getting ideas on which books to read by various subjects to 
 either solve specific problems and/or develop new skills. 
 
@@ -13,7 +13,7 @@ To Be Updated
 
 
 
-### Site Goals
+## Site Goals
 
 The goal of the site is to allow visitors to read reviews created by registered users and to find inspiration for self-help books that they can read by topic. 
 The features of the website include: 
@@ -102,17 +102,27 @@ and it's a great colour to use if you want your customers to trust you.
 Blue is also appealing to shoppers on a budget. It's the most widely-used color for company logos. 
 Be careful, as some shades of blue can be perceived as depressing and cold.” (Source: grasshopper.com) 
 
-To get the right shade of blue I used the colour wheel to find a suitable blue shade that contrasted well with the brown tint of my bookstore image 
+To get the right combination of shades I used the colour wheel to find a suitable blue shade that contrasted well with the brown tint of my bookstore image
 which I obtained from Canva’s colour wheel: 
 https://www.canva.com/colors/color-wheel/
+I then combined this with my prefered green shades from the MaterializeCSS colour palette. 
+
+"Green is easy for the eyes to process and is often connected with nature. It's actually been proved to instill 
+a sense of wealth, and is sometimes used in retail locations to help consumers chill out. Like blue, green is appealing 
+to budget shoppers and those who carefully consider purchases. Green is a peaceful, refreshing color. 
+Environmental companies often choose green. It's the most popular color used in interior design, so consider painting 
+your office green!"
 
 
-##### Home page
+## Web Contents
+
+### Home page
 I used royalty-free images from Canva for a traditional bookstore where the user might imagine going to buy a good non-fiction book like a Waterstones. 
 The home page includes a responsive navbar. 
 
 ![home page top](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/01-home.gif)
 
+Bottom half of the home page contains a second image for the scrolling MaterializeCSS parallax. 
 
 ![home page bottom](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/02-home.gif)
 
@@ -122,7 +132,7 @@ Includes basic contact details plus social media icons.
 ![footer](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/03-footer.gif)
 
 
-##### Book Review Page
+### Book Review Page
 The page includes a search bar plus cards with the image of each book reviewed and a reveal function that shows the review details submitted by the user.
 
 ![book review page](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/04-books.GIF)
@@ -149,7 +159,7 @@ If its the user who created the review or admin then the edit and delete opion b
 ![book card open all buttons](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/08-card-open-login.gif)
 
 
-##### Add Review Page
+### Add Review Page
 
 On the add review page a user who is logged in will have a form card to complete and submit a review. 
 The book images are URLs from book pictures on Amazon, where the image addresses are copied and pasted into the form. 
@@ -157,7 +167,7 @@ The book images are URLs from book pictures on Amazon, where the image addresses
 ![add review](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/09-review-card.gif)
 
 
-##### Edit Review Page
+### Edit Review Page
 
 The author or admin can also edit the review from the edit button on the book card. 
 Only admin will have the option to add a buy link to the review. 
@@ -165,21 +175,21 @@ Only admin will have the option to add a buy link to the review.
 ![edit reviews](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/12-edit-review.gif)
 
 
-##### Manage Genres Page
+### Manage Genres Page
 
 For admin the Manage genres page will enable the maintenance of the genres table. 
 
 ![manage genres page](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/10-manage-genres.gif)
 
 
-##### Add Genre Page
+### Add Genre Page
 
 Click on the add genre button takes you to the form field where admin enters a new genre. 
 
 ![add genre](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/11-add-genres.gif)
 
 
-##### Register new user page
+### Register new user page
 
 The 'Register' page contains a card where a new user can enter their user name and password credentials. 
 
@@ -196,7 +206,7 @@ The Terms and Conditions also allows for mobile users.
 ![T&C mobile](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/28-register-t%26c-modal-mobile.gif)
 
 
-##### User's profile Page
+### User's profile Page
 
 The profile page has the user's published reviews. 
 
@@ -208,7 +218,7 @@ Where no reviews are submitted the user's profile will have a blank card showing
 ![profile no review card](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/29-profile-no-review.gif)
 
 
-##### Defensive programming
+### Defensive programming
 
 When clicking delete on a book review the user is provided with a pop up modal warning asking to confirm the delete action. 
 
@@ -237,7 +247,7 @@ The exception is with the admin user profile which is required to apply links to
 or delete any inappropriate content if users violate the community's terms and conditions. 
 
 
-##### Alerts
+### Alerts
 
 Various alerts appear across the website confirming where user actions were successful: 
 
@@ -258,69 +268,72 @@ Various alerts appear across the website confirming where user actions were succ
 ![logout successful alert](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/25-logout-alert.gif)
 
 
-### Technologies Used
+## Technologies Used
 
-#### Languages 
-![HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), ![CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), ![JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) and ![Python](https://www.python.org/).
+### Languages 
+[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) and [Python](https://www.python.org/).
 
-#### Database  
-![MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+### Database  
+[MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
 
-#### Libraries
+### Libraries
 
--	![MaterializeCSS](https://materializecss.com/)
-Used to create the overall layout and for the responsive design elements. 
+-	[MaterializeCSS](https://materializecss.com/)
+Used to create the overall layout it was used for the responsive design elements and overall user experience. 
 
--	![JQuery](https://jquery.com/)
+-	[JQuery](https://jquery.com/)
 Used for MaterializeCSS component functionality. 
 
--	![Flask](https://www.fullstackpython.com/flask.html)
+-	[Flask](https://www.fullstackpython.com/flask.html)
 A python web framework. 
 
--	![Werkzeug (webpage security)](https://werkzeug.palletsprojects.com/en/1.0.x/)
-A WSGI web application toolkit used by Flask which includes a number of features e.g. debugger. 
+-	[Werkzeug (webpage security)](https://werkzeug.palletsprojects.com/en/1.0.x/)
+A WSGI web application toolkit used by Flask which includes a number of features e.g. debugger tool. 
 
--	![Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
+-	[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
 A powerful template engine used by Flask. 
 
--	![PyMongo](https://pymongo.readthedocs.io/en/stable/) 
+-	[PyMongo](https://pymongo.readthedocs.io/en/stable/) 
 
 
-#### Tools 
+### Tools 
 Git and GitHub: Used for version control as well as storing the project files and source code.
 Gitpod: An online IDE linked to the GitHub repository. 
 CDN references: cdnjs - The #1 free and open source CDN built to make life easier for developers
 Secret Key Generator:  RandomKeygen - The Secure Password & Keygen Generator
 Font-Awesome: Sourcing icons used across the site 
 Google Fonts API: Used to source the text font. 
-Canva: Used for the high fidelity mockups and applying the ![colour wheel tool](https://www.canva.com/colors/color-wheel/).
+Canva: Used for the high fidelity mockups and applying the [colour wheel tool](https://www.canva.com/colors/color-wheel/).
 RandomKeygen: Used to generate the SECRET_KEY for Flask.
 Favicon: Used to convert image to Favicon. 
 Am I Responsive?: Used to view the website across multiple screen sizes simultaneously. 
 
 
-### Site Construction 
+## Site Construction 
 
-##### Site Layout 
+### Site Layout 
 
 The [site structure and jinja template relationship](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/site-design.pdf) are stored in this pdf. 
 
 Basic layout includes the the web pages and interactive elements (cards) indicating user access privileges. 
 
 
-#### Database architecture
+### Database architecture
 
 The [database architecture](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/data-model.pdf) can be found here. 
 
 Using MongoDB I was able to create the empty collections with all data entered and created via the website's frontend. 
 
-
-#### Project Management 
-
-(Comment on the use of GitHub Projects etc. - Create a manual kanban board to track features and monitor bug fixes.)
+Insert database overview. 
+Insert Crud features. 
 
 
-### Testing 
+### Project Management 
+
+GitHub Projects was used to track key features and tasks using the kanban board feature. 
+
+
+## Testing 
 
 System testing: 
 
@@ -338,17 +351,43 @@ Bugs identified
 
 
 
+## Heroku Deployment 
+
+The project was automatically deployed to Heroku from my GitHub repository. To achieve this the following steps were then taken: 
+1.	Within my Gitpod IDE create my .gitignore file set to ignore my virtual environment and then my env.py file. 
+2.	Within the gitignore file set it to ignore the ‘env.py’ file and ‘__pycache__/’ directory which is automatically generated. 
+3.	Set default environmental variables within the ‘env.py’ file. 
+    a.	os.environ.setdefault(“IP”, “0.0.0.0”)
+    b.	os.environ.setdefault(“PORT”, “5000”)
+    c.	os.environ.setdefault(“SECRET_KEY”, “YOUR_SECRET_KEY”)
+    d.	os.environ.setdefault(“MONGO_URI”, “mongodb+srv://root:YOURPASSWORD@YOUR-CLUSTER-NAME.2qobt.mongodb.net/YOUR-DATABASE-NAME?retryWrites=true&w=majority”
+    e.	os.environ.setdefault(“MONGO_DBNAME”, “YOUR_DATABASE_NAME”)
+
+4.	Save the ‘env.py’ file and open the ‘app.py’ file. Import OS and Flask and import ‘env.py’ 
+5.	Within the IDE's terminal window, create a requirements.txt file by typing pip3 freeze --local > requirements.txt, 
+6.	Similarly create a Procfile by typing python app.py > Procfile
+7.	Login or sign up for a new account on Heroku, then click Create New App from your dashboard.
+8.	Enter a name for your app and select the correct region before pressing Create App.
+9.	Select the Deploy tab and then click on the GitHub button under Deployment method, this will setup automatic deployment from the GitHub repository. 
+10.	Ensure that your GitHub profile is displayed. 
+11.	Type your repository name in the search box next to the dropdown box displaying your GitHub account name. When the repository appears, click Connect.
+12.	In the Settings tab, under the Config Vars section, click the Reveal Config Vars button.
+13.	Enter the key value pairs as per your env.py file as follows:
+    a.	Variable = “IP”: Value = “0.0.0.0”
+    b.	Variable = “PORT”: Value = “5000”
+    c.	Variable = “SECRET_KEY”: Value = “YOUR_SECRET_KEY”
+    d.	Variable = “MONGO_URI”: Value = “mongodb+srv://root:YOUR_PASSWORD@YOUR_CLUSTER_NAME.2qobt.mongodb.net/YOUR_DATABASE_NAME?retryWrites=true&w=majority”
+    e.	Variable = “MONGO_DBNAME”: Value = “YOUR_DATABASE_NAME”
+    f.	Variable = “DEBUG”: Value = “FALSE”
+
+14. Select the Deploy tab again and click Enable Automatic Deploys under the Automatic Deploys section. Below this is the Manual Deploy section. Select Master branch and click Deploy Branch.
+
+15. The app will now be built, and when its completed the message "Your app was successfully deployed" will be revealed. Click View to launch the deployed app.
 
 
-### Deployment 
+## Credits 
 
-~Information to be added 
-
-
-
-### Credits 
-
-#### Content
+### Content
 
 Parts of the code were re-used from the Take Manager mini-project from the Data Centric module plus with my own additional code. 
 A lot of the styling was taken from materializecss and the images used were from Canva. 
@@ -356,7 +395,7 @@ A lot of the styling was taken from materializecss and the images used were from
 Guidance on some of the features and functions was obtained via YouTube. 
 
 
-#### Acknowledgements
+### Acknowledgements
 
 I would like to give a huge and sincere thank you to: 
 
@@ -364,20 +403,5 @@ I would like to give a huge and sincere thank you to:
 - Ulysees Ryan-Flynn for the excellent Tutor support, patience and understanding of my personal circumstances, 
 - My mentor Adegbenge Adeye and CI Tutor support for the technical guidance 
 
-They have been super supportive during this project and I appreciate their feedback and advice which helped to get this site to this final state.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+They have all been super supportive during this project and I appreciate their feedback and advice which helped 
+to get this site to this final state.
