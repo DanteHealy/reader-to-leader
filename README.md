@@ -11,45 +11,45 @@ either solve specific problems and/or develop new skills.
 ## Contents
 
 - [1 Site Goals](#1-Site-Goals)
-    ..* [1.1	User Experience (UX)](#1.1-User-Experience-(UX))
-        ..* [1.1.1	User Goals](#1.1.1-User-Goals)
-        ..* [1.1.2	User Stories](#1.1.2-User-Stories)
-    ..* [1.2	Wireframes](#1.2-Wireframes)
-    ..* [1.3	Design features](#1.3-Design-features)
+    - [1.1	User Experience (UX)](#1.1-User-Experience-(UX))
+        - [1.1.1	User Goals](#1.1.1-User-Goals)
+        - [1.1.2	User Stories](#1.1.2-User-Stories)
+    - [1.2	Wireframes](#1.2-Wireframes)
+    - [1.3	Design features](#1.3-Design-features)
 
 - [2	Web Contents](#2-Web-Contents)
-    ..* [2.1	Home Page](#2.1-Home-Page)
-    ..* [2.2	Book Review Page](#2.2-Book-Review-Page)
-    ..* [2.3	Add Review Page](#2.3-Add-Review-Page)
-    ..* [2.4	Edit Review Page](#2.4-Edit-Review-Page)
-    ..* [2.5	Manage Genres Page](#2.5-Manage-Genres-Page)
-    ..* [2.6	Add Genre Page](#2.6-Add-Genre-Page)
-    ..* [2.7	Register New User Page](#2.7-Register-New-User-Page)
-    ..* [2.8	User’s Profile Page](#2.8-User’s-Profile-Page)
-    ..* [2.9	Defensive Programming](#2.9-Defensive-Programming)
-    ..* [2.10	Alerts](#2.10-Alerts)
+    - [2.1	Home Page](#2.1-Home-Page)
+    - [2.2	Book Review Page](#2.2-Book-Review-Page)
+    - [2.3	Add Review Page](#2.3-Add-Review-Page)
+    - [2.4	Edit Review Page](#2.4-Edit-Review-Page)
+    - [2.5	Manage Genres Page](#2.5-Manage-Genres-Page)
+    - [2.6	Add Genre Page](#2.6-Add-Genre-Page)
+    - [2.7	Register New User Page](#2.7-Register-New-User-Page)
+    - [2.8	User’s Profile Page](#2.8-User’s-Profile-Page)
+    - [2.9	Defensive Programming](#2.9-Defensive-Programming)
+    - [2.10	Alerts](#2.10-Alerts)
 
 - [3	Technologies Used](#3-Technologies-Used)
-    ..* [3.1	Languages](#3.1-Languages)
-    ..* [3.2	Database](#3.2-Database)
-    ..* [3.3	Libraries](#3.3-Libraries)
-    ..* [3.4	Tools](#3.4-Tools)
+    - [3.1	Languages](#3.1-Languages)
+    - [3.2	Database](#3.2-Database)
+    - [3.3	Libraries](#3.3-Libraries)
+    - [3.4	Tools](#3.4-Tools)
 
 - [4	Site Construction](#4-Site-Construction)
-    ..* [4.1	Site Layout](#4.1-Site-Layout)
-    ..* [4.2	Database Architecture](#4.2-Database-Architecture)
-    ..* [4.3	Project Management](#4.3-Project-Management)
+    - [4.1	Site Layout](#4.1-Site-Layout)
+    - [4.2	Database Architecture](#4.2-Database-Architecture)
+    - [4.3	Project Management](#4.3-Project-Management)
 
 - [5	Testing](#5-Testing)
-    ..* [5.1	System testing](#5.1-System-testing)
-    ..* [5.2	Manual testing](#5.2-Manual-testing)
-    ..* [5.3	Bugs identified](#5.3-Bugs-identified)
+    - [5.1	System testing](#5.1-System-testing)
+    - [5.2	Manual testing](#5.2-Manual-testing)
+    - [5.3	Bugs identified](#5.3-Bugs-identified)
 
 - [6	Heroku Deployment](#6-Heroku-Deployment)
 
 - [7	Credits](#7-Credits)
-    ..* [7.1	Content](#7.1-Content)
-    ..* [7.2	Acknowledgements](#7.2-Acknowledgements)
+    - [7.1	Content](#7.1-Content)
+    - [7.2	Acknowledgements](#7.2-Acknowledgements)
 
 
 
@@ -155,6 +155,7 @@ Environmental companies often choose green. It's the most popular color used in 
 your office green!"
 
 
+[Return to Contents](#Contents)
 ---
 ## 2 Web Contents
 
@@ -310,6 +311,7 @@ Various alerts appear across the website confirming where user actions were succ
 ![logout successful alert](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/25-logout-alert.gif)
 
 
+[Return to Contents](#Contents)
 ---
 ## 3 Technologies Used
 
@@ -352,6 +354,7 @@ Favicon: Used to convert image to Favicon.
 Am I Responsive?: Used to view the website across multiple screen sizes simultaneously. 
 
 
+[Return to Contents](#Contents)
 ---
 ## 4 Site Construction 
 
@@ -377,6 +380,7 @@ Insert Crud features.
 GitHub Projects was used to track key features and tasks using the kanban board feature. 
 
 
+[Return to Contents](#Contents)
 ---
 ## 5 Testing 
 
@@ -395,7 +399,7 @@ GitHub Projects was used to track key features and tasks using the kanban board 
  - Still remaining 
 
 
-
+[Return to Contents](#Contents)
 ---
 ## 6 Heroku Deployment 
 
@@ -435,6 +439,7 @@ To achieve this the following steps were taken:
 16. Click "View" to launch the deployed app.
 
 
+[Return to Contents](#Contents)
 ---
 ## 7 Credits 
 
@@ -456,3 +461,5 @@ I would like to give a huge and sincere thank you to:
 
 They have all been super supportive during this project and I appreciate their feedback and advice which helped 
 to get this site to this final state.
+
+[Return to Contents](#Contents)
