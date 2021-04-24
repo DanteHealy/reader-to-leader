@@ -51,11 +51,6 @@ nav ul a:hover {
     color: #64ffda;        
 }
 
-/* Check if this impacts warning image position or else delete */
-.warning-image {
-    margin: auto;
-}
-
 /* apply full width containers */
 .wide-container {
     width: 100%;
@@ -77,7 +72,6 @@ nav ul a:hover {
 }
 
 /*- styling and sizing the book review cards -*/ 
-
 .card.large .card-image {
     max-height: 85%;
     max-width: 70%;    
@@ -96,6 +90,3 @@ nav ul a:hover {
 .btn-small {
     margin: 5px;    
 }
-
-
-

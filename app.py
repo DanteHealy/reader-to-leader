@@ -95,10 +95,10 @@ def login():
     * Logs user in if credentials match.
     * Appends username to session['user'] cookie.
 
-    \n Args:    
+    \n Args:
     * None.
 
-    \n Returns:    
+    \n Returns:
     * User profile template if successful.
     * Login page with flash displaying error if unsuccessful.
     """
@@ -111,11 +111,11 @@ def login():
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(
-                        request.form.get("username")))
-                    return redirect(url_for(
+                    existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(
+                    request.form.get("username")))
+                return redirect(url_for(
                         "profile", username=session["user"]))
             else:
                 # invalid password match
@@ -133,13 +133,13 @@ def login():
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     """profile:
-    * Searches for a users' book reviews 
+    * Searches for a users' book reviews
 
-    \n Args:    
+    \n Args:
     * username
 
-    \n Returns:    
-    * User book reviews for their profile page.     
+    \n Returns:
+    * User book reviews for their profile page.
     """
 
     # grab the session user's username from db
@@ -148,7 +148,8 @@ def profile(username):
             {"username": session["user"]})["username"]
         if session["user"] == username:
             books = list(mongo.db.books.find({"created_by": username}))
-            return render_template("profile.html", books=books, username=username)
+            return render_template("profile.html",
+                                   books=books, username=username)
 
         return redirect(url_for("get_books"))
 
@@ -158,13 +159,13 @@ def profile(username):
 @app.route("/logout")
 def logout():
     """logout:
-    * Removes user from session. 
+    * Removes user from session.
 
-    \n Args:    
+    \n Args:
     * None
 
-    \n Returns:    
-    *   Confirmation user is logged out.  
+    \n Returns:
+    *   Confirmation user is logged out.
     """
 
     # remove user from session cookies
@@ -178,14 +179,14 @@ def add_review():
     """add_review:
     * Posts user review from form to MongoDB
 
-    \n Args:    
+    \n Args:
     * None.
 
-    \n Returns:    
-    * Submits user review form to MongoDB 
+    \n Returns:
+    * Submits user review form to MongoDB
     """
 
-    if "user" in session: 
+    if "user" in session:
         if request.method == "POST":
             books = {
                 "genre_name": request.form.get("genre_name"),
@@ -212,13 +213,13 @@ def edit_book(book_id):
     """edit_book:
     * Allows user to submit changes to own review.
     * Allows admin to allow update reviews and post\
-        affiliate links. 
+        affiliate links.
 
-    \n Args:    
+    \n Args:
     * book_id
 
-    \n Returns:    
-    * Updated review if changes were submitted successfully.     
+    \n Returns:
+    * Updated review if changes were submitted successfully.
     """
 
     if "user" in session:
@@ -242,7 +243,7 @@ def edit_book(book_id):
 
             genres = mongo.db.genres.find().sort("genre_name", 1)
             return render_template(
-                "edit_review.html", book=book, 
+                "edit_review.html", book=book,
                 genres=genres)
 
         return redirect(url_for("get_books"))
@@ -254,18 +255,18 @@ def edit_book(book_id):
 def delete_book(book_id):
     """delete_book:
     * Allows user to delete own review.
-    * Allows admin to delete book reviews. 
+    * Allows admin to delete book reviews.
 
-    \n Args:    
+    \n Args:
     * book_id
 
-    \n Returns:    
-    * Delete review and confirm successful.     
+    \n Returns:
+    * Delete review and confirm successful.
     """
 
-    if "user" in session: 
+    if "user" in session:
         username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
+            {"username": session["user"]})["username"]
         book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
         if book["created_by"] == username or session["user"] == "admin":
 
@@ -280,18 +281,18 @@ def delete_book(book_id):
 
 @app.route("/get_genres")
 def get_genres():
-    """get_genres:    
+    """get_genres:
     * Allows admin to access the manage genres\
-        page. 
+        page.
 
-    \n Args:    
+    \n Args:
     * None.
 
-    \n Returns:    
+    \n Returns:
     * Renders manage genres webpage.
     """
 
-    if "user" in session: 
+    if "user" in session:
         if session["user"] == "admin":
 
             genres = list(mongo.db.genres.find().sort("genre_name", 1))
@@ -305,16 +306,16 @@ def get_genres():
 @app.route("/add_genre", methods=["GET", "POST"])
 def add_genre():
     """add_genre:
-    * Allows admin to add new genres. 
+    * Allows admin to add new genres.
 
-    \n Args:    
+    \n Args:
     * None.
 
-    \n Returns:    
+    \n Returns:
     * Posts new genre to MongoDB and confirms successful.
     """
 
-    if "user" in session: 
+    if "user" in session:
         if session["user"] == "admin":
             if request.method == "POST":
                 genre = {
@@ -333,17 +334,17 @@ def add_genre():
 
 @app.route("/edit_genre/<genre_id>", methods=["GET", "POST"])
 def edit_genre(genre_id):
-    """edit_genre:    
-    * Allows admin to update genres.  
+    """edit_genre:
+    * Allows admin to update genres.
 
-    \n Args:    
+    \n Args:
     * genre_id
 
-    \n Returns:    
-    * Updated genre and confirmation message if successful.  
+    \n Returns:
+    * Updated genre and confirmation message if successful.
     """
 
-    if "user" in session: 
+    if "user" in session:
         if session["user"] == "admin":
 
             if request.method == "POST":
@@ -364,17 +365,17 @@ def edit_genre(genre_id):
 
 @app.route("/delete_genre/<genre_id>")
 def delete_genre(genre_id):
-    """delete_genre:    
+    """delete_genre:
     * Allows admin to remove genre.
 
-    \n Args:    
+    \n Args:
     * genre_id
 
-    \n Returns:    
+    \n Returns:
     * Deletes genre and confirms if it was succesful.
     """
 
-    if "user" in session: 
+    if "user" in session:
         if session["user"] == "admin":
 
             mongo.db.genres.remove({"_id": ObjectId(genre_id)})
@@ -389,13 +390,13 @@ def delete_genre(genre_id):
 @app.errorhandler(404)
 def page_not_found(e):
     """page_not_found:
-    * Responds to 404 error when page not found. 
+    * Responds to 404 error when page not found.
 
-    \n Args:    
+    \n Args:
     * e
 
-    \n Returns:    
-    * Error message.  
+    \n Returns:
+    * Error message.
     """
 
     return render_template("error.html"), 404
@@ -406,11 +407,11 @@ def internal_error(e):
     """internal_error:
     * Responds to 500 internal error.
 
-    \n Args:    
+    \n Args:
     * e
 
-    \n Returns:    
-    * Error message.  
+    \n Returns:
+    * Error message.
     """
 
     return render_template("error.html"), 500
@@ -421,11 +422,11 @@ def service_unavailable(e):
     """service_unavailable:
     * Responds to 503 when service unavailable.
 
-    \n Args:    
+    \n Args:
     * e
 
-    \n Returns:    
-    * Error message.  
+    \n Returns:
+    * Error message.
     """
 
     return render_template("error.html"), 503
@@ -435,4 +436,4 @@ def service_unavailable(e):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=os.environ.get("DEBUG"))

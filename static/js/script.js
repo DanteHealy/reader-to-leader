@@ -7,7 +7,7 @@
     /* modal to warn users when deleting reviews or genres */
     $('.modal').modal();
     
-    /* jquery for MaterializeCSS initialization */
+    /* jquery for MaterializeCSS initialization taken from Code Institute for input field validation */
     validateMaterializeSelect();
     function validateMaterializeSelect() {
         let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };

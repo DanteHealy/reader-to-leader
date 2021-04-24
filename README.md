@@ -387,31 +387,50 @@ GitHub Projects was used to track key features and tasks using the kanban board 
 ---
 ## 5 Testing 
 
-### 5.1 System testing: 
+### 5.1 System testing 
 
-DevTools lighthouse 
+[HTML Validator](https://validator.w3.org/)
+- Code passed except for some error warnings on jinja template code. 
 
-HTML Validator 
+[CSS Validator](https://jigsaw.w3.org/css-validator/)
+- No errors found. 
 
-CSS Validator 
+[JavaScript Validator](https://jshint.com/)
+- No errors found. 
 
-JavaScript Validator 
-
-Python PEP8 Validator 
+[Python PEP8 Validator](http://pep8online.com/)
 
 
-### 5.2 Manual testing: 
+[DevTools lighthouse](https://developers.google.com/speed/pagespeed/insights/) 
+- Remove redundant code and replace inefficient png format images with jpeg. 
 
+### 5.2 Manual testing 
+
+- Tested all links are working. 
+- Check site was responsive 
+    - Navbar works in desktop and mobile mode
+
+- Checked all functionality including: 
+    
+    - All buttons working
+    - All forms are editable
+
+- User accesses
+    - Ensure defensive programming works as designed 
+    - Only admin can edit genres
+    - Only admin can edit affiliate links
+    - Users can only edit their own reviews 
 
 ### 5.3 Bugs identified
 
  - Fixed 
     - parallax images initially stored as png were saved to jpeg to improve site performance. 
-    
-
+    - corrected bug that caused the first review to be deleted instead of the review selected. 
+    - corrected the same bug that impacted genres (first genre deleted)
+    - corrected delete warning modal which was appearing within the card element causing sizing and inherited format issues. 
 
  - Still remaining 
-
+    - I couldn't get the lighthouse score above 77. 
 
 [Return to Contents](#Contents)
 
