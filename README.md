@@ -10,11 +10,51 @@ either solve specific problems and/or develop new skills.
 ---
 ## Contents
 
-To Be Updated
+[1 Site Goals](#-1-Site-Goals)
+    [1.1	User Experience (UX)](#-1.1-User-Experience-(UX))
+        [1.1.1	User Goals](#-1.1.1-User-Goals)
+        [1.1.2	User Stories](#-1.1.2-User-Stories)
+    [1.2	Wireframes](#-1.2-Wireframes)
+    [1.3	Design features](#-1.3-Design-features)
+
+[2	Web Contents](#2-Web-Contents)
+    [2.1	Home Page](#-2.1-Home-Page)
+    [2.2	Book Review Page](#-2.2-Book-Review-Page)
+    [2.3	Add Review Page](#-2.3-Add-Review-Page)
+    [2.4	Edit Review Page](#-2.4-Edit-Review-Page)
+    [2.5	Manage Genres Page](#-2.5-Manage-Genres-Page)
+    [2.6	Add Genre Page](#-2.6-Add-Genre-Page)
+    [2.7	Register New User Page](#-2.7-Register-New-User-Page)
+    [2.8	User’s Profile Page](#-2.8-User’s-Profile-Page)
+    [2.9	Defensive Programming](#-2.9-Defensive-Programming)
+    [2.10	Alerts](#-2.10-Alerts)
+
+[3	Technologies Used](#-3-Technologies-Used)
+    [3.1	Languages](#-3.1-Languages)
+    [3.2	Database](#-3.2-Database)
+    [3.3	Libraries](#-3.3-Libraries)
+    [3.4	Tools](#-3.4-Tools)
+
+[4	Site Construction](#-4-Site-Construction)
+    [4.1	Site Layout](#-4.1-Site-Layout)
+    [4.2	Database Architecture](#-4.2-Database-Architecture)
+    [4.3	Project Management](#-4.3-Project-Management)
+
+[5	Testing](#-5-Testing)
+    [5.1	System testing](#-5.1-System-testing)
+    [5.2	Manual testing](#-5.2-Manual-testing)
+    [5.3	Bugs identified](#-5.3-Bugs-identified)
+
+[6	Heroku Deployment](#-6-Heroku-Deployment)
+
+[7	Credits](#-7-Credits)
+    [7.1	Content](#-7.1-Content)
+    [7.2	Acknowledgements](#-7.2-Acknowledgements)
+
 
 
 ---
-## Site Goals
+## 1 Site Goals
 
 The goal of the site is to allow visitors to read reviews created by registered users and to find inspiration for self-help books that they can read by topic. 
 The features of the website include: 
@@ -29,15 +69,15 @@ This is achieved by:
 -	Having an Admin account which allows a superuser to also add or edit new genres. (New: “and add affiliate links to the book reviews.”) 
 
 
-### User Experience (UX)
+### 1.1 User Experience (UX)
 
-#### User Goals
+#### 1.1.1 User Goals
 -	Read book reviews created by other users 
 -	Create book reviews for others to read 
 -	Access links to purchase the books they are interested in
 
 
-#### User Stories
+#### 1.1.2 User Stories
 New visitor
 -	As a user I can see a navigation bar at the top of the page where I can navigate to the available pages. 
 -	As a user I can see the site name or brand logo in the navigation bar. 
@@ -62,7 +102,7 @@ Site Owner / Site Administrator
 Please note: That the affiliate links are for demonstration purposes only to demonstrate how the site could be potentially be funded and are not actual affiliate links. 
 
 
-#### Wireframes
+#### 1.2 Wireframes
 
 Initial
 I designed the wireframes using [Balsamiq](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/ms3-book-review-wireframes.pdf) for the basic layout and structure. 
@@ -84,7 +124,7 @@ version and key elements might appear before starting to code the site.
 -	Login
 
 
-#### Design Features 
+#### 1.3 Design Features 
 
 Font
 I chose Barlow sans-serif for a clean look and feel like the body of a modern non-fiction or text book. 
@@ -116,9 +156,9 @@ your office green!"
 
 
 ---
-## Web Contents
+## 2 Web Contents
 
-### Home page
+### 2.1 Home page
 I used royalty-free images from Canva for a traditional bookstore where the user might imagine going to buy a good non-fiction book like a Waterstones. 
 The home page includes a responsive navbar. 
 
@@ -134,7 +174,7 @@ Includes basic contact details plus social media icons.
 ![footer](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/03-footer.gif)
 
 
-### Book Review Page
+### 2.2 Book Review Page
 The page includes a search bar plus cards with the image of each book reviewed and a reveal function that shows the review details submitted by the user.
 
 ![book review page](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/04-books.GIF)
@@ -161,7 +201,7 @@ If its the user who created the review or admin then the edit and delete opion b
 ![book card open all buttons](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/08-card-open-login.gif)
 
 
-### Add Review Page
+### 2.3 Add Review Page
 
 On the add review page a user who is logged in will have a form card to complete and submit a review. 
 The book images are URLs from book pictures on Amazon, where the image addresses are copied and pasted into the form. 
@@ -169,7 +209,7 @@ The book images are URLs from book pictures on Amazon, where the image addresses
 ![add review](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/09-review-card.gif)
 
 
-### Edit Review Page
+### 2.4 Edit Review Page
 
 The author or admin can also edit the review from the edit button on the book card. 
 Only admin will have the option to add a buy link to the review. 
@@ -177,21 +217,21 @@ Only admin will have the option to add a buy link to the review.
 ![edit reviews](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/12-edit-review.gif)
 
 
-### Manage Genres Page
+### 2.5 Manage Genres Page
 
 For admin the Manage genres page will enable the maintenance of the genres table. 
 
 ![manage genres page](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/10-manage-genres.gif)
 
 
-### Add Genre Page
+### 2.6 Add Genre Page
 
 Click on the add genre button takes you to the form field where admin enters a new genre. 
 
 ![add genre](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/11-add-genres.gif)
 
 
-### Register new user page
+### 2.7 Register new user page
 
 The 'Register' page contains a card where a new user can enter their user name and password credentials. 
 
@@ -208,7 +248,7 @@ The Terms and Conditions also allows for mobile users.
 ![T&C mobile](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/28-register-t%26c-modal-mobile.gif)
 
 
-### User's profile Page
+### 2.8 User's profile Page
 
 The profile page has the user's published reviews. 
 
@@ -220,7 +260,7 @@ Where no reviews are submitted the user's profile will have a blank card showing
 ![profile no review card](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/29-profile-no-review.gif)
 
 
-### Defensive programming
+### 2.9 Defensive programming
 
 When clicking delete on a book review the user is provided with a pop up modal warning asking to confirm the delete action. 
 
@@ -249,7 +289,7 @@ The exception is with the admin user profile which is required to apply links to
 or delete any inappropriate content if users violate the community's terms and conditions. 
 
 
-### Alerts
+### 2.10 Alerts
 
 Various alerts appear across the website confirming where user actions were successful: 
 
@@ -271,15 +311,15 @@ Various alerts appear across the website confirming where user actions were succ
 
 
 ---
-## Technologies Used
+## 3 Technologies Used
 
-### Languages 
+### 3.1 Languages 
 [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) and [Python](https://www.python.org/).
 
-### Database  
+### 3.2 Database  
 [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
 
-### Libraries
+### 3.3 Libraries
 
 -	[MaterializeCSS](https://materializecss.com/)
 Used to create the overall layout it was used for the responsive design elements and overall user experience. 
@@ -299,7 +339,7 @@ A powerful template engine used by Flask.
 -	[PyMongo](https://pymongo.readthedocs.io/en/stable/) 
 
 
-### Tools 
+### 3.4 Tools 
 Git and GitHub: Used for version control as well as storing the project files and source code.
 Gitpod: An online IDE linked to the GitHub repository. 
 CDN references: cdnjs - The #1 free and open source CDN built to make life easier for developers
@@ -313,16 +353,16 @@ Am I Responsive?: Used to view the website across multiple screen sizes simultan
 
 
 ---
-## Site Construction 
+## 4 Site Construction 
 
-### Site Layout 
+### 4.1 Site Layout 
 
 The [site structure and jinja template relationship](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/site-design.pdf) are stored in this pdf. 
 
 Basic layout includes the the web pages and interactive elements (cards) indicating user access privileges. 
 
 
-### Database architecture
+### 4.2 Database architecture
 
 The [database architecture](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/data-model.pdf) can be found here. 
 
@@ -332,7 +372,7 @@ Insert database overview.
 Insert Crud features. 
 
 
-### Project Management 
+### 4.3 Project Management 
 
 GitHub Projects was used to track key features and tasks using the kanban board feature. 
 
@@ -340,13 +380,13 @@ GitHub Projects was used to track key features and tasks using the kanban board 
 ---
 ## 5 Testing 
 
-### System testing: 
+### 5.1 System testing: 
 
 
-### Manual testing: 
+### 5.2 Manual testing: 
 
 
-### Bugs identified
+### 5.3 Bugs identified
 
  - Fixed 
 
