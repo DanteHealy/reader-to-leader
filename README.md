@@ -2,7 +2,7 @@
 
 # Read to Lead 
 
-Read to Lead is a book review community website covering non-fiction books for for personal development.  
+![Read to Lead](http://reader-to-leader-project.herokuapp.com/home_page) is a book review community website covering non-fiction books for for personal development.  
 The intent of the website is to provide value to visitors by getting ideas on which books to read by various subjects to 
 either solve specific problems and/or develop new skills. 
 
@@ -143,7 +143,7 @@ Opening the card on click reveals the review details.
 ![book card open](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/07-card-open.gif)
 
 
-Only the buy button will be available for users who did not create the review and are logged in or who are not admin. 
+Only the buy button will be available for users who did not create the review and are logged in or casual visitors. 
 If its the user who created the review or admin then the edit and delete opion buttons will also be available. 
 
 ![book card open all buttons](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/08-card-open-login.gif)
@@ -152,6 +152,7 @@ If its the user who created the review or admin then the edit and delete opion b
 ##### Add Review Page
 
 On the add review page a user who is logged in will have a form card to complete and submit a review. 
+The book images are URLs from book pictures on Amazon, where the image addresses are copied and pasted into the form. 
 
 ![add review](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/09-review-card.gif)
 
@@ -159,6 +160,7 @@ On the add review page a user who is logged in will have a form card to complete
 ##### Edit Review Page
 
 The author or admin can also edit the review from the edit button on the book card. 
+Only admin will have the option to add a buy link to the review. 
 
 ![edit reviews](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/12-edit-review.gif)
 
@@ -224,6 +226,12 @@ Trying to force break to access unauthorised areas of the website the programme 
 
 ![login card](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/21-login-card.gif)
 
+
+If no image link is used or the image URL isn't working the book review card will show a default image. 
+
+![review with no image](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/30-review-no-image.gif)
+
+
 This applies to all CRUD functions that no unauthorised user can modify another user's work. 
 The exception is with the admin user profile which is required to apply links to the buy buttoms on the reviews and edit 
 or delete any inappropriate content if users violate the community's terms and conditions. 
@@ -250,28 +258,45 @@ Various alerts appear across the website confirming where user actions were succ
 ![logout successful alert](https://github.com/DanteHealy/reader-to-leader/blob/master/static/readme/images/25-logout-alert.gif)
 
 
-
 ### Technologies Used
 
-Languages : HTML, CSS, JavaScript and Python  
+#### Languages 
+![HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), ![CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), ![JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) and ![Python](https://www.python.org/).
 
-Database : MongoDB Atlas
+#### Database  
+![MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
 
-Libraries
--	MaterializeCSS: https://materializecss.com/
--	JQuery: https://jquery.com/
--	Werkzeug (webpage security): https://werkzeug.palletsprojects.com/en/1.0.x/ 
--	Flask: https://www.fullstackpython.com/flask.html
--	Jinja: https://jinja.palletsprojects.com/en/2.11.x/
--	PyMongo: https://pymongo.readthedocs.io/en/stable/
+#### Libraries
+
+-	![MaterializeCSS](https://materializecss.com/)
+Used to create the overall layout and for the responsive design elements. 
+
+-	![JQuery](https://jquery.com/)
+Used for MaterializeCSS component functionality. 
+
+-	![Flask](https://www.fullstackpython.com/flask.html)
+A python web framework. 
+
+-	![Werkzeug (webpage security)](https://werkzeug.palletsprojects.com/en/1.0.x/)
+A WSGI web application toolkit used by Flask which includes a number of features e.g. debugger. 
+
+-	![Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
+A powerful template engine used by Flask. 
+
+-	![PyMongo](https://pymongo.readthedocs.io/en/stable/) 
 
 
-Tools 
+#### Tools 
+Git and GitHub: Used for version control as well as storing the project files and source code.
+Gitpod: An online IDE linked to the GitHub repository. 
 CDN references: cdnjs - The #1 free and open source CDN built to make life easier for developers
 Secret Key Generator:  RandomKeygen - The Secure Password & Keygen Generator
-Font-Awesome: Font Awesome
-Canva (including the colour wheel): https://www.canva.com/colors/color-wheel/
-Favicon: https://favicon.io/
+Font-Awesome: Sourcing icons used across the site 
+Google Fonts API: Used to source the text font. 
+Canva: Used for the high fidelity mockups and applying the ![colour wheel tool](https://www.canva.com/colors/color-wheel/).
+RandomKeygen: Used to generate the SECRET_KEY for Flask.
+Favicon: Used to convert image to Favicon. 
+Am I Responsive?: Used to view the website across multiple screen sizes simultaneously. 
 
 
 ### Site Construction 
