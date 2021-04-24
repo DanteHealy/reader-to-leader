@@ -480,17 +480,17 @@ To achieve this the following steps were taken:
 
 ### 7.1 Content
 
-Parts of the code were re-used from the Take Manager mini-project from the Data Centric module and some inspirational cues from Simon Vardy's project combioned with my own additional code and ideas for the site. 
+Parts of the code were re-used from the Task Manager mini-project in the Data Centric module and some inspirational cues from Simon Vardy's project "The Reading Room" combioned with my own additional code and ideas for the site. 
 A lot of the styling was taken from materializecss and the images used for the home page were from the royalty free options in Canva. 
 
-Guidance on some of the features and functions was obtained via YouTube. 
+Guidance on some of the features and functions was obtained via YouTube videos. 
 
 
 ### 7.2 Acknowledgements
 
 I would like to give a huge and sincere thank you to: 
 
-- Simon Vardy, Sam Laubscher, and Michael Standen for their continued support and encouragement,  
+- Sam Laubscher, Simon Vardy and Michael Standen for their continued support and encouragement,  
 - Ulysees Ryan-Flynn for the excellent Tutor support, patience and understanding of my personal circumstances, 
 - My mentor Adegbenge Adeye and CI Tutor support for the technical guidance 
 
