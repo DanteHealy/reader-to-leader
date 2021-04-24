@@ -11,45 +11,45 @@ either solve specific problems and/or develop new skills.
 ## Contents
 
 - [1 Site Goals](#1-Site-Goals)
-    - [1.1	User Experience (UX)](#1.1-User-Experience-(UX))
-        - [1.1.1	User Goals](#1.1.1-User-Goals)
-        - [1.1.2	User Stories](#1.1.2-User-Stories)
-    - [1.2	Wireframes](#1.2-Wireframes)
-    - [1.3	Design features](#1.3-Design-features)
+    - 1.1	User Experience (UX)
+        - 1.1.1	User Goals
+        - 1.1.2	User Stories
+    - 1.2	Wireframes
+    - 1.3	Design features
 
 - [2	Web Contents](#2-Web-Contents)
-    - [2.1	Home Page](#2.1-Home-Page)
-    - [2.2	Book Review Page](#2.2-Book-Review-Page)
-    - [2.3	Add Review Page](#2.3-Add-Review-Page)
-    - [2.4	Edit Review Page](#2.4-Edit-Review-Page)
-    - [2.5	Manage Genres Page](#2.5-Manage-Genres-Page)
-    - [2.6	Add Genre Page](#2.6-Add-Genre-Page)
-    - [2.7	Register New User Page](#2.7-Register-New-User-Page)
-    - [2.8	User’s Profile Page](#2.8-User’s-Profile-Page)
-    - [2.9	Defensive Programming](#2.9-Defensive-Programming)
-    - [2.10	Alerts](#2.10-Alerts)
+    - 2.1	Home Page
+    - 2.2	Book Review Page
+    - 2.3	Add Review Page
+    - 2.4	Edit Review Page
+    - 2.5	Manage Genres Page
+    - 2.6	Add Genre Page
+    - 2.7	Register New User Page
+    - 2.8	User’s Profile Page
+    - 2.9	Defensive Programming
+    - 2.10	Alerts
 
 - [3	Technologies Used](#3-Technologies-Used)
-    - [3.1	Languages](#3.1-Languages)
-    - [3.2	Database](#3.2-Database)
-    - [3.3	Libraries](#3.3-Libraries)
-    - [3.4	Tools](#3.4-Tools)
+    - 3.1	Languages
+    - 3.2	Database
+    - 3.3	Libraries
+    - 3.4	Tools
 
 - [4	Site Construction](#4-Site-Construction)
-    - [4.1	Site Layout](#4.1-Site-Layout)
-    - [4.2	Database Architecture](#4.2-Database-Architecture)
-    - [4.3	Project Management](#4.3-Project-Management)
+    - 4.1	Site Layout
+    - 4.2	Database Architecture
+    - 4.3	Project Management
 
 - [5	Testing](#5-Testing)
-    - [5.1	System testing](#5.1-System-testing)
-    - [5.2	Manual testing](#5.2-Manual-testing)
-    - [5.3	Bugs identified](#5.3-Bugs-identified)
+    - 5.1	System testing
+    - 5.2	Manual testing
+    - 5.3	Bugs identified
 
 - [6	Heroku Deployment](#6-Heroku-Deployment)
 
 - [7	Credits](#7-Credits)
-    - [7.1	Content](#7.1-Content)
-    - [7.2	Acknowledgements](#7.2-Acknowledgements)
+    - 7.1	Content
+    - 7.2	Acknowledgements
 
 
 
@@ -143,19 +143,19 @@ and it's a great colour to use if you want your customers to trust you.
 Blue is also appealing to shoppers on a budget. It's the most widely-used color for company logos. 
 Be careful, as some shades of blue can be perceived as depressing and cold.” (Source: grasshopper.com) 
 
-To get the right combination of shades I used the colour wheel to find a suitable blue shade that contrasted well with the brown tint of my bookstore image
-which I obtained from Canva’s colour wheel: 
-https://www.canva.com/colors/color-wheel/
-I then combined this with my prefered green shades from the MaterializeCSS colour palette. 
-
 "Green is easy for the eyes to process and is often connected with nature. It's actually been proved to instill 
 a sense of wealth, and is sometimes used in retail locations to help consumers chill out. Like blue, green is appealing 
 to budget shoppers and those who carefully consider purchases. Green is a peaceful, refreshing color. 
 Environmental companies often choose green. It's the most popular color used in interior design, so consider painting 
 your office green!"
 
+To get the right combination of shades I used the colour wheel to find a suitable blue shade that contrasted well with the brown tint of my bookstore image
+which I obtained from [Canva’s colour wheel](https://www.canva.com/colors/color-wheel/).
+I then combined this with my prefered green shades from the MaterializeCSS colour palette. 
+
 
 [Return to Contents](#Contents)
+
 ---
 ## 2 Web Contents
 
@@ -312,6 +312,7 @@ Various alerts appear across the website confirming where user actions were succ
 
 
 [Return to Contents](#Contents)
+
 ---
 ## 3 Technologies Used
 
@@ -342,19 +343,20 @@ A powerful template engine used by Flask.
 
 
 ### 3.4 Tools 
-Git and GitHub: Used for version control as well as storing the project files and source code.
-Gitpod: An online IDE linked to the GitHub repository. 
-CDN references: cdnjs - The #1 free and open source CDN built to make life easier for developers
-Secret Key Generator:  RandomKeygen - The Secure Password & Keygen Generator
-Font-Awesome: Sourcing icons used across the site 
-Google Fonts API: Used to source the text font. 
-Canva: Used for the high fidelity mockups and applying the [colour wheel tool](https://www.canva.com/colors/color-wheel/).
-RandomKeygen: Used to generate the SECRET_KEY for Flask.
-Favicon: Used to convert image to Favicon. 
-Am I Responsive?: Used to view the website across multiple screen sizes simultaneously. 
+- Git and GitHub: Used for version control as well as storing the project files and source code.
+- Gitpod: An online IDE linked to the GitHub repository. 
+- CDN references: cdnjs - The #1 free and open source CDN built to make life easier for developers
+- Secret Key Generator:  RandomKeygen - The Secure Password & Keygen Generator
+- Font-Awesome: Sourcing icons used across the site 
+- Google Fonts API: Used to source the text font. 
+- Canva: Used for the high fidelity mockups and applying the [colour wheel tool](https://www.canva.com/colors/color-wheel/).
+- RandomKeygen: Used to generate the SECRET_KEY for Flask.
+- Favicon: Used to convert image to Favicon. 
+- Am I Responsive?: Used to view the website across multiple screen sizes simultaneously. 
 
 
 [Return to Contents](#Contents)
+
 ---
 ## 4 Site Construction 
 
@@ -381,10 +383,21 @@ GitHub Projects was used to track key features and tasks using the kanban board 
 
 
 [Return to Contents](#Contents)
+
 ---
 ## 5 Testing 
 
 ### 5.1 System testing: 
+
+DevTools lighthouse 
+
+HTML Validator 
+
+CSS Validator 
+
+JavaScript Validator 
+
+Python PEP8 Validator 
 
 
 ### 5.2 Manual testing: 
@@ -393,13 +406,15 @@ GitHub Projects was used to track key features and tasks using the kanban board 
 ### 5.3 Bugs identified
 
  - Fixed 
-
+    - parallax images initially stored as png were saved to jpeg to improve site performance. 
+    
 
 
  - Still remaining 
 
 
 [Return to Contents](#Contents)
+
 ---
 ## 6 Heroku Deployment 
 
@@ -440,6 +455,7 @@ To achieve this the following steps were taken:
 
 
 [Return to Contents](#Contents)
+
 ---
 ## 7 Credits 
 
